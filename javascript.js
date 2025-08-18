@@ -12,7 +12,7 @@ const I18N = {
         changeTheme: 'Change theme',
         myProjects: 'My projects',
         myRepos: 'My github repositories',
-        internProject: 'Project for my intern',
+        internProject: 'Project for my internship',
         websiteWChUW: 'Website for the Faculty of Chemistry, University of Warsaw (WChUW)',
         createdBy: 'Created by'
     }
