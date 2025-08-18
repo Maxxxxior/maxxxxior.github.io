@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>My Projects - Maxxxxior</title>
+</head>
+<body>
+    <div class="page">
+        <header class="topbar" aria-label="Górna belka nawigacyjna">
+            <div class="actions">
+                <button type="button" id="themeBtn" class="btn" aria-label="Przełącz motyw">Clair / Obscur</button>
+                <button type="button" id="langBtn" class="btn" aria-label="Przełącz język">EN</button>
+            </div>
+        </header>
+
+        <main>
+            <h1 data-i18n="myProjects">Moje projekty</h1>
+            <div class="projects">
+                <a href="https://maxxxxior.github.io/projekt-praktyki/" class="project">
+                    <span data-i18n="internProject">Projekt na praktyki</span>
+                </a>
+                <a href="https://maxxxxior.github.io/strona-wchuw/" class="project">
+                    <span data-i18n="websiteWChUW">Strona dla Wydziału Chemii Uniwersytetu Warszawskiego (WChUW)</span>
+                </a>
+                <a class="project">...</a>
+            </div>
+        </main>
+
+        <footer>
+            <nav class="socials">
+                <a href="https://github.com/Maxxxxior" target="_blank" rel="noopener noreferrer" class="fa fa-github" id="socials"></a>
+                <a href="https://www.linkedin.com/in/maksymilian-podlecki-003b69267" target="_blank" rel="noopener noreferrer" class="fa fa-linkedin" id="socials"></a>
+            </nav>
+            <div class="copyright">
+                <span>© <span id="year"></span> <span data-i18n="createdBy">Stworzone przez</span> <a href="https://github.com/Maxxxxior" target="_blank" rel="noopener noreferrer" class="max">Maxxxxior</a> • <a href="mailto:Maksymilian.Podlecki@gmail.com" class="mail">Maksymilian.Podlecki@gmail.com</a></span>
+            </div>
+        </footer>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
