@@ -9,18 +9,26 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>My Projects - Maxxxxior</title>
 </head>
-<body>
+<body onload="sortRepos()">
     <div class="page">
         <header class="topbar" aria-label="Górna belka nawigacyjna">
+            <div class="github">
+                <a href="https://github.com/Maxxxxior" class="github-avatar">
+                    <img style="height: auto;" alt src="images\github_pfp.svg" width="32" height="32">
+                </a>
+                <a href="https://github.com/Maxxxxior" class="github-nickname">
+                    <span>Maxxxxior</span>
+                </a>
+            </div>
             <div class="actions">
-                <button type="button" id="themeBtn" class="btn" aria-label="Przełącz motyw">Clair / Obscur</button>
+                <button type="button" id="themeBtn" class="btn" aria-label="Przełącz motyw" data-i18n="changeTheme">Zmień motyw</button>
                 <button type="button" id="langBtn" class="btn" aria-label="Przełącz język">EN</button>
             </div>
         </header>
 
         <main>
-            <h1 data-i18n="myProjects">Moje projekty</h1>
             <div class="projects">
+                <h1 data-i18n="myProjects">Moje projekty</h1>
                 <a href="https://maxxxxior.github.io/projekt-praktyki/" class="project">
                     <span data-i18n="internProject">Projekt na praktyki</span>
                 </a>
@@ -28,6 +36,33 @@
                     <span data-i18n="websiteWChUW">Strona dla Wydziału Chemii Uniwersytetu Warszawskiego (WChUW)</span>
                 </a>
                 <a class="project">...</a>
+            </div>
+            <div class="repos">
+                <h1 data-i18n="myRepos">Moje repozytoria</h1>
+                <a href="https://github.com/Maxxxxior/AutoMinecraft" class="repo" id="repo">
+                    <span>AutoMinecraft</span>
+                </a>
+                <a href="https://github.com/Maxxxxior/base64deencoder" class="repo" id="repo">
+                    <span>base64deencoder</span>
+                </a>
+                <a href="https://github.com/Maxxxxior/DiscordBotGB" class="repo" id="repo">
+                    <span>DiscordBotGB</span>
+                </a>
+                <a href="https://github.com/Maxxxxior/FunkyChat" class="repo" id="repo">
+                    <span>FunkyChat</span>
+                </a>
+                <a href="https://github.com/Maxxxxior/ImageToText" class="repo" id="repo">
+                    <span>ImageToText</span>
+                </a>
+                <a href="https://maxxxxior.github.io/" class="repo" id="repo">
+                    <span>maxxxxior.github.io</span>
+                </a>
+                <a href="https://github.com/Maxxxxior/PioMaxSite" class="repo" id="repo">
+                    <span>PioMaxSite</span>
+                </a>
+                <a class="repo">
+                    <span>...</span>
+                </a>
             </div>
         </main>
 
