@@ -24,11 +24,17 @@ body {
     background: var(--main-bg);
     color: var(--main-text);
     text-align: center;
-    padding: 50px;
+    padding: 0px 50px 0px 50px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 a.project {
-    display: block;
+    display: inline-block;
     margin: 15px;
     font-size: 20px;
     color: var(--sec-text);
@@ -39,6 +45,32 @@ a.project:hover {
     text-decoration: none;
     color: var(--link);
 }
+
+.repos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+a.repo {
+    display: inline-block;
+    margin: 15px;
+    font-size: 20px;
+    /* padding: 6px 12px; */
+    color: var(--sec-text);
+    text-decoration: none;
+    /* border-radius: 6px; */
+    /* transition: background 0.2s; */
+}
+
+a.repo:hover {
+    text-decoration: none;
+    color: var(--link);
+}
+
+/* .repos .repo:hover {
+    background: rgba(0, 0, 0, 0.1);
+} */
 
 a#socials {
     display: block;

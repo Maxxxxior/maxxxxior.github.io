@@ -2,12 +2,14 @@
 const I18N = {
     pl: {
         myProjects: 'Moje projekty',
+        myRepos: 'Moje repozytoria',
         internProject: 'Projekt na praktyki',
         websiteWChUW: 'Strona dla Wydziału Chemii Uniwersytetu Warszawskiego (WChUW)',
         createdBy: 'Stworzone przez'
     },
     en: {
         myProjects: 'My projects',
+        myRepos: 'My github repositories',
         internProject: 'Project for my intern',
         websiteWChUW: 'Website for the Faculty of Chemistry, University of Warsaw (WChUW)',
         createdBy: 'Created by'
@@ -53,3 +55,17 @@ function setLang(lang) {
         el.textContent = I18N[lang][key];
     });
 }
+
+// Repos alphabetical order
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(".repos");
+    const links = Array.from(container.querySelectorAll("a.repo"));
+
+    const special = links.find(link => link.textContent.trim() === "...");
+    const normalLinks = links.filter(link => link !== special);
+
+    normalLinks.sort((a, b) =>
+    a.textContent.trim().localeCompare(b.textContent.trim(), "pl", {sensitivity: "base"}));
+
+    [...normalLinks, special].forEach(link => container.appendChild(link));
+});
