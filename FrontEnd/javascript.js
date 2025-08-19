@@ -5,7 +5,8 @@ const I18N = {
         myProjects: 'Moje projekty',
         myRepos: 'Moje repozytoria',
         internProject: 'Projekt na praktyki',
-        websiteWChUW: 'Strona dla Wydziału Chemii Uniwersytetu Warszawskiego (WChUW)',
+        // websiteWChUW: 'Strona dla Wydziału Chemii Uniwersytetu Warszawskiego (WChUW)',
+        websiteWChUW: 'Projekt poboczny ;) (w trakcie realizacji)',
         createdBy: 'Stworzone przez'
     },
     en: {
@@ -13,7 +14,8 @@ const I18N = {
         myProjects: 'My projects',
         myRepos: 'My github repositories',
         internProject: 'Project for my internship',
-        websiteWChUW: 'Website for the Faculty of Chemistry, University of Warsaw (WChUW)',
+        // websiteWChUW: 'Website for the Faculty of Chemistry, University of Warsaw (WChUW)',
+        websiteWChUW: 'Side Project ;) (in development)',
         createdBy: 'Created by'
     }
 }
