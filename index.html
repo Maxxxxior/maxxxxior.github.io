@@ -7,28 +7,53 @@
     <link rel="stylesheet" href="frontend\style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>My Projects - Maxxxxior</title>
 </head>
 <body onload="sortRepos()">
     <div class="page">
         <header class="topbar" aria-label="Górna belka nawigacyjna">
-            <div class="github">
-                <a href="https://github.com/Maxxxxior" class="github-avatar">
-                    <img style="height: auto;" alt src="images\github_pfp.svg" width="32" height="32">
-                </a>
-                <a href="https://github.com/Maxxxxior" class="github-nickname">
-                    <span>Maxxxxior</span>
-                </a>
+            <div class="leftSide">
+                <div class="github">
+                    <a href="https://github.com/Maxxxxior" class="github-avatar">
+                        <img style="height: auto;" alt src="images\github_pfp.svg" width="32" height="32">
+                    </a>
+                    <a href="https://github.com/Maxxxxior" class="github-nickname">
+                        <span>Maxxxxior</span>
+                    </a>
+                </div>
             </div>
-            <div class="actions">
-                <button type="button" id="themeBtn" class="btn" aria-label="Przełącz motyw" data-i18n="changeTheme">Zmień motyw</button>
-                <button type="button" id="langBtn" class="btn" aria-label="Przełącz język">EN</button>
+            <div class="rightSide">
+                <div class="dropdown">
+                    <button class="dropBtn" data-i18n="repos">Repozytoria</button>
+                    <div class="dropdown-content">
+                        <a href="https://github.com/Maxxxxior/base64deencoder" class="repoDrop" id="repoDrop">
+                            <span>base64deencoder</span>
+                        </a>
+                        <a href="https://github.com/Maxxxxior/DiscordBotGB" class="repoDrop" id="repoDrop">
+                            <span>DiscordBotGB</span>
+                        </a>
+                        <a href="https://github.com/Maxxxxior/FunkyChat" class="repoDrop" id="repoDrop">
+                            <span>FunkyChat</span>
+                        </a>
+                        <a href="https://github.com/Maxxxxior/ImageToText" class="repoDrop" id="repoDrop">
+                            <span>ImageToText</span>
+                        </a>
+                        <a href="https://github.com/Maxxxxior/maxxxxior.github.io" class="repoDrop" id="repoDrop">
+                            <span>maxxxxior.github.io</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button type="button" id="themeBtn" class="btn" aria-label="Przełącz motyw" data-i18n="changeTheme">Zmień motyw</button>
+                    <button type="button" id="langBtn" class="btn" aria-label="Przełącz język">EN</button>
+                </div>
             </div>
         </header>
 
         <main>
             <div class="projects">
-                <h1 data-i18n="myProjects">Moje projekty</h1>
+                <h1 class="myProjects" data-i18n="myProjects">Moje projekty</h1>
                 <div class="internship">
                     <a href="https://maxxxxior.github.io/MaxChatbot/index.html" class="project">
                     <span>MaxChatbot - </span><span data-i18n="internProject">Projekt na praktyki</span>
@@ -45,34 +70,66 @@
                 <a href="https://maxxxxior.github.io/side-project/" class="project">
                     <span data-i18n="websiteWChUW">Projekt poboczny ;) (w trakcie realizacji)</span>
                 </a>
-                <a class="project">...</a>
             </div>
             <div class="repos">
-                <h1 data-i18n="myRepos">Moje repozytoria</h1>
-                <a href="https://github.com/Maxxxxior/AutoMinecraft" class="repo" id="repo">
-                    <span>AutoMinecraft</span>
-                </a>
-                <a href="https://github.com/Maxxxxior/base64deencoder" class="repo" id="repo">
-                    <span>base64deencoder</span>
-                </a>
-                <a href="https://github.com/Maxxxxior/DiscordBotGB" class="repo" id="repo">
-                    <span>DiscordBotGB</span>
-                </a>
-                <a href="https://github.com/Maxxxxior/FunkyChat" class="repo" id="repo">
-                    <span>FunkyChat</span>
-                </a>
-                <a href="https://github.com/Maxxxxior/ImageToText" class="repo" id="repo">
-                    <span>ImageToText</span>
-                </a>
-                <a href="https://maxxxxior.github.io/" class="repo" id="repo">
-                    <span>maxxxxior.github.io</span>
-                </a>
-                <a href="https://github.com/Maxxxxior/PioMaxSite" class="repo" id="repo">
-                    <span>PioMaxSite</span>
-                </a>
-                <a class="repo">
-                    <span>...</span>
-                </a>
+                <h1 class="myRepos" data-i18n="myRepos">Moje repozytoria</h1>
+                <div class="pinnedRepos">
+                    <div class="pinnedRepo">
+                        <div class="repoHeader">
+                            <span class="material-symbols-outlined">book_2</span>
+                            <a href="https://github.com/Maxxxxior/base64deencoder" class="repoName">base64deencoder</a>
+                        </div>
+                        <span class="repoDescription" data-i18n="repoBase64"></span>
+                        <div class="repoFooter">
+                            <span class="material-symbols-outlined proLang python">circle</span>
+                            <span class="repoLang">Python</span>
+                        </div>
+                    </div>
+                    <div class="pinnedRepo">
+                        <div class="repoHeader">
+                            <span class="material-symbols-outlined">book_2</span>
+                            <a href="https://github.com/Maxxxxior/DiscordBotGB" class="repoName">DiscordBotGB</a>
+                        </div>
+                        <span class="repoDescription" data-i18n="repoDiscordBotGB"></span>
+                        <div class="repoFooter">
+                            <span class="material-symbols-outlined proLang python">circle</span>
+                            <span class="repoLang">Python</span>
+                        </div>
+                    </div>
+                    <div class="pinnedRepo">
+                        <div class="repoHeader">
+                            <span class="material-symbols-outlined">book_2</span>
+                            <a href="https://github.com/Maxxxxior/FunkyChat" class="repoName">FunkyChat</a>
+                        </div>
+                        <span class="repoDescription" data-i18n="repoFunkyChat"></span>
+                        <div class="repoFooter">
+                            <span class="material-symbols-outlined proLang javascript">circle</span>
+                            <span class="repoLang">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="pinnedRepo">
+                        <div class="repoHeader">
+                            <span class="material-symbols-outlined">book_2</span>
+                            <a href="https://github.com/Maxxxxior/ImageToText" class="repoName">ImageToText</a>
+                        </div>
+                        <span class="repoDescription" data-i18n="repoImageToText"></span>
+                        <div class="repoFooter">
+                            <span class="material-symbols-outlined proLang python">circle</span>
+                            <span class="repoLang">Python</span>
+                        </div>
+                    </div>
+                    <div class="pinnedRepo">
+                        <div class="repoHeader">
+                            <span class="material-symbols-outlined">book_2</span>
+                            <a href="https://github.com/Maxxxxior/maxxxxior.github.io" class="repoName">maxxxxior.github.io</a>
+                        </div>
+                        <span class="repoDescription" data-i18n="repoMaxxxxiorGithubIO"></span>
+                        <div class="repoFooter">
+                            <span class="material-symbols-outlined proLang html">circle</span>
+                            <span class="repoLang">HTML</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 
@@ -87,5 +144,7 @@
         </footer>
     </div>
     <script src="frontend\javascript.js"></script>
+    <script src="frontend\i18n.js"></script>
+    <script src="frontend\theme.js"></script>
 </body>
 </html>
