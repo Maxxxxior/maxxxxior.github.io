@@ -7,6 +7,7 @@ setTheme(initialTheme);
 themeBtn.addEventListener('click', () => {
     const next = (html.dataset.theme === 'dark') ? 'light' : 'dark';
     setTheme(next);
+    updateServiceStatus();
 });
 
 function setTheme(theme) {

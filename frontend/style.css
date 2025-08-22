@@ -6,11 +6,21 @@
     --accent: #df2935;
     --accent-pink: #ff00d4;
     --socials: #df2935;
+    /* Programming Languages */
     --python: #3572a5;
     --javascript: #f1e05a;
     --html: #e34c26;
-    --link: #3772ff;
-    --yellow: #fdca40;
+    /* Services */
+    --service-running: #28a745;
+    --service-sleeping: #6c757d;
+    --service-runtime-error: #dc3545;
+    --service-paused: #ffc107;
+    --service-build-error: #e83e8c;
+    --service-config-error: #fd7e14;
+    --service-building: #17a2b8;
+    --service-app-starting: #007bff;
+    --service-running-app-starting: #20c997;
+    /* Shadows */
     --shadow-red-1: rgba(255, 0, 0, 0.2);
     --shadow-red-2: rgba(255, 0, 0, 0.19);
     --shadow-red-3: rgba(255, 0, 0, 0.4);
@@ -19,6 +29,9 @@
     --shadow-pink-2: var(--accent-pink);
     --shadow-pink-3: var(--accent-pink);
     --shadow-pink-4: var(--accent-pink);
+    /* Additional */
+    --link: #3772ff;
+    --yellow: #fdca40;
 }
 
 html[data-theme="light"]{
@@ -28,11 +41,21 @@ html[data-theme="light"]{
     --accent: #df2935;
     --accent-pink: #ff00d4;
     --socials: #df2935;
+    /* Programming Languages */
     --python: #3572a5;
     --javascript: #f1e05a;
     --html: #e34c26;
-    --link: #3772ff;
-    --yellow: #fdca40;
+    /* Services */
+    --running: #28a745;
+    --sleeping: #6c757d;
+    --runtime-error: #dc3545;
+    --paused: #ffc107;
+    --build-error: #e83e8c;
+    --config-error: #fd7e14;
+    --building: #17a2b8;
+    --app-starting: #007bff;
+    --running-app-starting: #20c997;
+    /* Shadows */
     --shadow-red-1: rgba(255, 0, 0, 0.2);
     --shadow-red-2: rgba(255, 0, 0, 0.19);
     --shadow-red-3: rgba(255, 0, 0, 0.4);
@@ -41,6 +64,9 @@ html[data-theme="light"]{
     --shadow-pink-2: var(--accent-pink);
     --shadow-pink-3: var(--accent-pink);
     --shadow-pink-4: var(--accent-pink);
+    /* Additional */
+    --link: #3772ff;
+    --yellow: #fdca40;
 }
 
 html, body {
@@ -307,7 +333,7 @@ a.repoName:hover::after {
 .repoFooter {
     position: absolute;
     bottom: 10px;
-    left: 10px;
+    left: 12px;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -315,7 +341,7 @@ a.repoName:hover::after {
     color: var(--main-text);
 }
 
-@media (max-wdith: 900px) {
+@media (max-width: 900px) {
     .pinnedRepo {
         flex: 1 1 calc(50% - 12px);
         max-width: unset;
@@ -356,6 +382,133 @@ a.repoName:hover::after {
 
 .proLang.html {
     color: var(--html);
+}
+
+/* Services */
+.SAM {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--sec-text);
+}
+
+h1.samTitle {
+    color: var(--main-text);
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.service {
+    position: relative;
+    flex: 1 1 calc(33.333% - 10px);
+    max-width: calc(33.333% - 10px);
+    min-width: 400px;
+    border: 1px solid var(--accent);
+    background: var(--main-bg);
+    color: var(--accent);
+    padding: 8px 12px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    min-height: 60px;
+}
+
+.serviceHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.serviceIcon {
+    color: var(--accent);
+}
+
+.serviceName {
+    position: relative;
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.serviceName:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 3px;
+    width: 0;
+    background: var(--accent);
+    transition: width 0.4s ease;
+    filter:
+        drop-shadow(0 2px 4px var(--shadow-red-1))
+        drop-shadow(0 4px 6px var(--shadow-red-2))
+        drop-shadow(0 0 10px var(--shadow-red-3))
+        drop-shadow(0 0 20px var(--shadow-red-4));
+}
+
+a.serviceName:hover::after {
+    width: 100%;
+}
+
+.serviceType {
+    font-weight: 100;
+}
+
+.serviceFooter {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    color: var(--main-text);
+}
+
+.serviceStatus.maxChatbotBackend {
+    color: var(--service-sleeping);
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+.status {
+    font-weight: bold;
+    display: inline-block;
+}
+
+.countdown {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .service {
+        flex: 1 1 calc(50% - 12px);
+        max-width: unset;
+    }
+}
+
+@media (max-width: 600px) {
+    .service {
+        flex: 1 1 100%;
+        max-width: unset;
+    }
+}
+
+.material-symbols-outlined.serviceStatus {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
 
 /* Repos */

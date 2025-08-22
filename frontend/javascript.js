@@ -1,8 +1,6 @@
 // Initialization
 const html = document.documentElement;
 
-lucide.createIcons();
-
 const yearSpan = document.getElementById('year');
 yearSpan.textContent = new Date().getFullYear();
 

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>My Projects - Maxxxxior</title>
+    <title>My Projects | Maxxxxior</title>
 </head>
 <body onload="sortRepos()">
     <div class="page">
@@ -42,10 +42,13 @@
                         <a href="https://github.com/Maxxxxior/maxxxxior.github.io" class="repoDrop" id="repoDrop">
                             <span>maxxxxior.github.io</span>
                         </a>
+                        <a href="https://github.com/Maxxxxior/MaxChatbot" class="repoDrop" id="repoDrop">
+                            <span>MaxChatbot</span>
+                        </a>
                     </div>
                 </div>
                 <div class="actions">
-                    <button type="button" id="themeBtn" class="btn" aria-label="Przełącz motyw" data-i18n="changeTheme">Zmień motyw</button>
+                    <button type="button" id="themeBtn" class="btn" aria-label="Przełącz motyw" data-i18n="changeTheme"></button>
                     <button type="button" id="langBtn" class="btn" aria-label="Przełącz język">EN</button>
                 </div>
             </div>
@@ -58,19 +61,12 @@
                     <a href="https://maxxxxior.github.io/MaxChatbot/index.html" class="project">
                     <span>MaxChatbot - </span><span data-i18n="internProject">Projekt na praktyki</span>
                     </a>
-                    <span>/</span>
-                    <a href="https://huggingface.co/spaces/Maxxxxior/MaxChatbotBackend" class="project">
-                        <span>Backend</span>
-                    </a>
-                    <span>/</span>
-                    <a href="https://github.com/Maxxxxior/MaxChatbot" class="project">
-                        <span>Github</span>
-                    </a>
                 </div>
                 <a href="https://maxxxxior.github.io/side-project/" class="project">
                     <span data-i18n="websiteWChUW">Projekt poboczny ;) (w trakcie realizacji)</span>
                 </a>
             </div>
+
             <div class="repos">
                 <h1 class="myRepos" data-i18n="myRepos">Moje repozytoria</h1>
                 <div class="pinnedRepos">
@@ -129,6 +125,35 @@
                             <span class="repoLang">HTML</span>
                         </div>
                     </div>
+                    <div class="pinnedRepo">
+                        <div class="repoHeader">
+                            <span class="material-symbols-outlined">book_2</span>
+                            <a href="https://github.com/Maxxxxior/MaxChatbot" class="repoName">MaxChatbot</a>
+                        </div>
+                        <span class="repoDescription" data-i18n="repoMaxChatbot"></span>
+                        <div class="repoFooter">
+                            <span class="material-symbols-outlined proLang html">circle</span>
+                            <span class="repoLang">HTML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="SAM">
+                <h1 class="samTitle" data-i18n="samTitle"></h1>
+                <div class="services">
+                    <div class="service">
+                        <div class="serviceHeader">
+                            <span class="material-symbols-outlined serviceIcon apicon">api</span>
+                            <a href="https://huggingface.co/spaces/Maxxxxior/MaxChatbotBackend" class="serviceName">MaxChatbotBackend</a>
+                            <span class="serviceName serviceType">(API)</span>
+                        </div>
+                        <div class="serviceFooter">
+                            <span class="material-symbols-outlined serviceStatus maxChatbotBackend">circle</span>
+                            <div class="status" data-i18n="status"></div>
+                            <div class="countdown"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -146,5 +171,6 @@
     <script src="frontend\javascript.js"></script>
     <script src="frontend\i18n.js"></script>
     <script src="frontend\theme.js"></script>
+    <script src="frontend\sam.js"></script>
 </body>
 </html>
