@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl" data-theme="dark">
+<!-- #region Head -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +11,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>My Projects | Maxxxxior</title>
 </head>
+<!-- #endregion -->
 <body onload="sortRepos()">
     <div class="page">
+        <!-- #region Topbar -->
         <header class="topbar" aria-label="Górna belka nawigacyjna">
+            <!-- #region Left Side -->
             <div class="leftSide">
                 <div class="github">
                     <a href="https://github.com/Maxxxxior" class="github-avatar">
@@ -23,50 +27,80 @@
                     </a>
                 </div>
             </div>
-            <div class="rightSide">
-                <div class="dropdown">
-                    <button class="dropBtn" data-i18n="repos">Repozytoria</button>
-                    <div class="dropdown-content">
-                        <a href="https://github.com/Maxxxxior/base64deencoder" class="repoDrop" id="repoDrop">
-                            <span>base64deencoder</span>
-                        </a>
-                        <a href="https://github.com/Maxxxxior/DiscordBotGB" class="repoDrop" id="repoDrop">
-                            <span>DiscordBotGB</span>
-                        </a>
-                        <a href="https://github.com/Maxxxxior/FunkyChat" class="repoDrop" id="repoDrop">
-                            <span>FunkyChat</span>
-                        </a>
-                        <a href="https://github.com/Maxxxxior/ImageToText" class="repoDrop" id="repoDrop">
-                            <span>ImageToText</span>
-                        </a>
-                        <a href="https://github.com/Maxxxxior/maxxxxior.github.io" class="repoDrop" id="repoDrop">
-                            <span>maxxxxior.github.io</span>
-                        </a>
-                        <a href="https://github.com/Maxxxxior/MaxChatbot" class="repoDrop" id="repoDrop">
-                            <span>MaxChatbot</span>
-                        </a>
-                    </div>
-                </div>
+            <!-- #endregion -->
+
+            <button id="burgerBtn" class="burger" aria-label="Menu">&#9776;</button>
+
+            <!-- #region Actions Wrapper -->
+            <div class="actionsWrapper">
                 <div class="actions">
+                    <div class="dropdown">
+                        <button class="dropBtn" data-i18n="repos">Repozytoria</button>
+                        <div class="dropdown-content">
+                            <a href="https://github.com/Maxxxxior/base64deencoder" class="repoDrop" id="repoDrop">
+                                <span>base64deencoder</span>
+                            </a>
+                            <a href="https://github.com/Maxxxxior/DiscordBotGB" class="repoDrop" id="repoDrop">
+                                <span>DiscordBotGB</span>
+                            </a>
+                            <a href="https://github.com/Maxxxxior/FunkyChat" class="repoDrop" id="repoDrop">
+                                <span>FunkyChat</span>
+                            </a>
+                            <a href="https://github.com/Maxxxxior/ImageToText" class="repoDrop" id="repoDrop">
+                                <span>ImageToText</span>
+                            </a>
+                            <a href="https://github.com/Maxxxxior/maxxxxior.github.io" class="repoDrop" id="repoDrop">
+                                <span>maxxxxior.github.io</span>
+                            </a>
+                            <a href="https://github.com/Maxxxxior/MaxChatbot" class="repoDrop" id="repoDrop">
+                                <span>MaxChatbot</span>
+                            </a>
+                        </div>
+                    </div>
                     <button type="button" id="themeBtn" class="btn" aria-label="Przełącz motyw" data-i18n="changeTheme"></button>
                     <button type="button" id="langBtn" class="btn" aria-label="Przełącz język">EN</button>
                 </div>
             </div>
+            <!-- #endregion -->
+            <!-- #region Right Side-->
+            <!-- <div class="rightSide">
+            </div> -->
+            <!-- #endregion -->
         </header>
+        <!-- #endregion -->
 
+        <!-- #region Main -->
         <main>
+            <!-- #region My Projects Cards -->
             <div class="projects">
                 <h1 class="myProjects" data-i18n="myProjects">Moje projekty</h1>
-                <div class="internship">
-                    <a href="https://maxxxxior.github.io/MaxChatbot/index.html" class="project">
-                    <span>MaxChatbot - </span><span data-i18n="internProject">Projekt na praktyki</span>
+
+                <div class="projects-grid">
+                    <a href="https://maxxxxior.github.io/MaxChatbot/index.html" class="project-card">
+                        <h2 data-i18n="maxchatbotProjectTitle">MaxChatbot</h2>
+                        <p data-i18n="maxchatbotProjectDescription">Projekt na praktyki - jest to webowy chatbot z analizą dokumentów i systemem CMS.</p>
+                        <svg class="border-svg" width="calc(100% + 12px)" height="calc(100% + 12px)">
+                            <rect x="6" y="6" width="calc(100% - 12px)" height="calc(100% - 12px)" rx="15" ry="15"/>
+                        </svg>
+                    </a>
+                    
+                    <a href="https://maxxxxior.github.io/SpisPomieszczenWChUW/" class="project-card">
+                        <div class="badge">
+                            <span class="material-symbols-outlined project-card-symbol warning">warning</span>
+                            <span data-i18n="projectStatusInDevelopment">W fazie rozwoju</span>
+                        </div>
+                        <h2 data-i18n="wchuwProjectTitle">Spis Pomieszczeń WChUW</h2>
+                        <p data-i18n="wchuwProjectDescription"></p>
+                        <p class="disclaimer" data-i18n="wchuwProjectDisclaimer"></p>
+                        <svg class="border-svg" width="calc(100% + 12px)" height="calc(100% + 12px)">
+                            <rect x="6" y="6" width="calc(100% - 12px)" height="calc(100% - 12px)" rx="15" ry="15"/>
+                        </svg>
                     </a>
                 </div>
-                <a href="https://maxxxxior.github.io/side-project/" class="project">
-                    <span data-i18n="websiteWChUW">Projekt poboczny ;) (w trakcie realizacji)</span>
-                </a>
             </div>
+            <!-- #endregion -->
 
+            <!-- #region My Repositories -->
             <div class="repos">
                 <h1 class="myRepos" data-i18n="myRepos">Moje repozytoria</h1>
                 <div class="pinnedRepos">
@@ -136,9 +170,26 @@
                             <span class="repoLang">HTML</span>
                         </div>
                     </div>
+                    <div class="pinnedRepo">
+                        <div class="repoHeader">
+                            <span class="material-symbols-outlined">book_2</span>
+                            <a href="https://github.com/Maxxxxior/SpisPomieszczenWChUW" class="repoName">SpisPomieszczenWChUW</a>
+                        </div>
+                        <div class="badge">
+                            <span class="material-symbols-outlined project-card-symbol warning">warning</span>
+                            <span data-i18n="projectStatusInDevelopment" data-i18n-tooltip="inDevelopmentTooltip">W fazie rozwoju</span>
+                        </div>
+                        <span class="repoDescription" data-i18n="repoWChUW"></span>
+                        <div class="repoFooter">
+                            <span class="material-symbols-outlined proLang html">circle</span>
+                            <span class="repoLang">HTML</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <!-- #endregion -->
 
+            <!-- #region SAM -->
             <div class="SAM">
                 <h1 class="samTitle" data-i18n="samTitle"></h1>
                 <div class="services">
@@ -156,21 +207,31 @@
                     </div>
                 </div>
             </div>
+            <!-- #endregion -->
         </main>
+        <!-- #endregion -->
 
+        <!-- #region Footer -->
         <footer>
+            <!-- #region Socials -->
             <nav class="socials">
                 <a href="https://github.com/Maxxxxior" target="_blank" rel="noopener noreferrer" class="fa fa-github" id="socials"></a>
                 <a href="https://www.linkedin.com/in/maksymilian-podlecki-003b69267" target="_blank" rel="noopener noreferrer" class="fa fa-linkedin" id="socials"></a>
             </nav>
+            <!-- #endregion -->
+            <!-- #region Copyright -->
             <div class="copyright">
                 <span>© <span id="year"></span> <span data-i18n="createdBy">Stworzone przez</span> <a href="https://github.com/Maxxxxior" target="_blank" rel="noopener noreferrer" class="max">Maxxxxior</a> • <a href="mailto:Maksymilian.Podlecki@gmail.com" class="mail">Maksymilian.Podlecki@gmail.com</a></span>
             </div>
+            <!-- #endregion -->
         </footer>
+        <!-- #endregion -->
     </div>
+    <!-- #region Scripts -->
     <script src="frontend\javascript.js"></script>
     <script src="frontend\i18n.js"></script>
     <script src="frontend\theme.js"></script>
     <script src="frontend\sam.js"></script>
+    <!-- #endregion -->
 </body>
 </html>

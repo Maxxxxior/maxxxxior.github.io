@@ -1,3 +1,4 @@
+//#region SAM
 async function updateServiceStatus() {
     const url = "https://huggingface.co/api/spaces/Maxxxxior/MaxChatbotBackend/runtime";
     const statusEl = document.querySelector(".status");
@@ -56,3 +57,4 @@ async function updateServiceStatus() {
 
 updateServiceStatus();
 setInterval(updateServiceStatus, 60000);
+//#endregion

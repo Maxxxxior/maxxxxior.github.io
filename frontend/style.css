@@ -1,15 +1,17 @@
-/* Colors */
+/* #region Colors */
 :root {
     --main-bg: #080708;
     --main-text: #e6e8e6;
     --sec-text: #df2935;
     --accent: #df2935;
+    --accent-sec: #611117;
     --accent-pink: #ff00d4;
     --socials: #df2935;
     /* Programming Languages */
     --python: #3572a5;
     --javascript: #f1e05a;
     --html: #e34c26;
+    --css: #663399;
     /* Services */
     --service-running: #28a745;
     --service-sleeping: #6c757d;
@@ -20,6 +22,24 @@
     --service-building: #17a2b8;
     --service-app-starting: #007bff;
     --service-running-app-starting: #20c997;
+    /* Text / Disclaimers */
+    --text-muted: #aaa;
+    /* Badge warnings */
+    --badge-warning-bg: rgba(255, 193, 7, 0.15);
+    --badge-warning-bg-light: rgba(255, 193, 7, 0.25);
+    --badge-warning-border: rgba(255, 193, 7, 0.4);
+    /* Badge informations */
+    --badge-info-bg: rgba(23, 162, 184, 0.15);
+    --badge-info-bg-light: rgba(23, 162, 184, 0.2);
+    /* Status Colors */
+    --status-success: #28a745;
+    --status-info: #17a2b8;
+    --status-warning: #ffc107;
+    --status-error: #dc3545;
+    --status-critical: #b30000;
+    --status-pending: #ff8800;
+    --status-neutral: #6c757d;
+    --status-disabled: #4b4b4b;
     /* Shadows */
     --shadow-red-1: rgba(255, 0, 0, 0.2);
     --shadow-red-2: rgba(255, 0, 0, 0.19);
@@ -39,12 +59,14 @@ html[data-theme="light"]{
     --main-text: #080708;
     --sec-text: #df2935;
     --accent: #df2935;
+    --accent-sec: #611117;
     --accent-pink: #ff00d4;
     --socials: #df2935;
     /* Programming Languages */
     --python: #3572a5;
     --javascript: #f1e05a;
     --html: #e34c26;
+    --css: #663399;
     /* Services */
     --running: #28a745;
     --sleeping: #6c757d;
@@ -55,6 +77,24 @@ html[data-theme="light"]{
     --building: #17a2b8;
     --app-starting: #007bff;
     --running-app-starting: #20c997;
+    /* Text / Disclaimers */
+    --text-muted: #555;
+    /* Badge warnings */
+    --badge-warning-bg: rgba(255, 193, 7, 0.3);
+    --badge-warning-bg-light: rgba(255, 193, 7, 0.35);
+    --badge-warning-border: rgba(255, 193, 7, 0.5);
+    /* Badge informations */
+    --badge-info-bg: rgba(23, 162, 184, 0.25);
+    --badge-info-bg-light: rgba(23, 162, 184, 0.3);
+    /* Status Colors */
+    --status-success: #28a745;
+    --status-info: #17a2b8;
+    --status-warning: #b8860b;
+    --status-error: #dc3545;
+    --status-critical: #b30000;
+    --status-pending: #ff8800;
+    --status-neutral: #6c757d;
+    --status-disabled: #4b4b4b;
     /* Shadows */
     --shadow-red-1: rgba(255, 0, 0, 0.2);
     --shadow-red-2: rgba(255, 0, 0, 0.19);
@@ -68,7 +108,9 @@ html[data-theme="light"]{
     --link: #3772ff;
     --yellow: #fdca40;
 }
+/* #endregion */
 
+/* #region main */
 html, body {
     height: 100%;
     margin: 0;
@@ -81,8 +123,9 @@ body {
     text-align: center;
     padding: 0px 50px 0px 50px;
 }
+/* #endregion */
 
-/* Layout */
+/* #region Layout */
 .page {
     min-height: 100vh;
     display: flex;
@@ -129,17 +172,18 @@ main {
     cursor: pointer;
     text-decoration: none;
 }
+/* #endregion */
 
-.rightSide {
+/* .rightSide {
     display: flex;
-}
+} */
 
-/* Dropdown Repositories */
+/* #region Dropdown Repositories */
 .dropdown {
     position: relative;
     display: inline-block;
-    padding-left: 8px;
-    padding-right: 8px;
+    /* padding-left: 8px; */
+    /* padding-right: 8px; */
 }
 
 .dropBtn {
@@ -190,14 +234,120 @@ main {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+/* #endregion */
 
-/* Change Theme and Change Language */
+/* #region Change Theme and Change Language */
 .actions {
     display: flex;
     align-items: center;
     gap: 8px;
 }
+/* #endregion */
 
+/* #region Burger */
+#burgerBtn {
+    display: none;
+    color: var(--accent);
+    background: var(--main-bg);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+}
+
+#burgerBtn:hover, #burgerBtn:focus, #burgerBtn:active {
+    color: var(--accent);
+    background: var(--main-bg);
+}
+
+@media (max-width: 650px) {
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropBtn {
+        width: 100%;
+        text-align: left;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: relative;
+        box-shadow: none;
+        border: none;
+        min-width: unset;
+        margin-top: 4px;
+    }
+
+    .dropdown-content.show {
+        display: block;
+    }
+
+    .dropdown-content a {
+        padding-left: 24px;
+    }
+
+    #burgerBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+        background: var(--main-bg);
+        border: 1px solid var(--accent);
+        border-radius: 6px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16px;
+        z-index: 1001;
+    }
+
+    .actionsWrapper {
+        position: fixed;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        width: max-content;
+        z-index: 1000;
+        
+        display: flex;
+        flex-direction: column;
+    }
+
+    .actionsWrapper .dropdown {
+        order: 1;
+        width: 100%;
+    }
+
+    .actionsWrapper .actions {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background: var(--main-bg);
+        border-left: 1px solid var(--accent);
+        border-bottom: 1px solid var(--accent);
+        border-radius: 0 0 0 8px;
+        padding: 70px 8px 8px 8px;
+        transform: translateX(100%);
+        transition: none;
+    }
+
+    .actionsWrapper .actions.active {
+        transform: translateX(0);
+        transition: transform 0.3s ease;
+    }
+
+    .actionsWrapper .actions button {
+        align-self: flex-start;
+    }
+}
+/* #endregion */
+
+/* #region Buttons */
 .btn {
     appearance: none;
     border: 1px solid var(--accent);
@@ -215,49 +365,146 @@ main {
     color: var(--main-bg);
     /* box-shadow: 0 8px 16px 0 var(--shadow-red-3), 0 6px 20px 0 var(--shadow-red-4); */
 }
+/* #endregion */
 
-/* Projects */
+/* #region My Projects */
 .projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--sec-text);
+    text-align: center;
+    padding: 40px 20px;
 }
 
 h1.myProjects {
     color: var(--main-text);
+    font-size: 2.2rem;
+    margin-bottom: 30px;
 }
 
-a.project {
-    display: inline-block;
-    margin: 15px;
-    font-size: 20px;
-    text-decoration: none;
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+    isolation: isolate;
+}
+
+/* #region project-card */
+.project-card {
     position: relative;
-    color: inherit;
+    background: var(--main-bg);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--sec-text);
+    text-decoration: none;
+    overflow: visible;
+    z-index: 1;
 }
 
-a.project::after {
-    content: "";
+.project-card h2 {
+    color: var(--main-text);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    z-index: 2;
+}
+
+.project-card svg.border-svg {
     position: absolute;
-    left: 0;
-    bottom: -4px;
-    height: 3px;
-    width: 0;
-    background: var(--accent);
-    transition: width 0.4s ease;
-    filter:
-        drop-shadow(0 2px 4px var(--shadow-red-1))
-        drop-shadow(0 4px 6px var(--shadow-red-2))
-        drop-shadow(0 0 10px var(--shadow-red-3))
-        drop-shadow(0 0 20px var(--shadow-red-4));
+    top: -6px;
+    left: -6px;
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    fill: none;
+    pointer-events: none;
+    z-index: 2;
+    filter: drop-shadow(0 2px 4px var(--shadow-red-1))
+            drop-shadow(0 4px 6px var(--shadow-red-2))
+            drop-shadow(0 0 10px var(--shadow-red-3))
+            drop-shadow(0 0 20px var(--shadow-red-4));
 }
 
-a.project:hover::after {
-    width: 100%;
+.project-card svg.border-svg rect {
+    stroke: var(--accent);
+    stroke-width: 6;
+    stroke-dasharray: var(--dash, 0);
+    stroke-dashoffset: var(--dash, 0);
+    rx: 15;
+    ry: 15;
 }
 
-/* Pinned repos */
+.project-card svg.border-svg.ready rect {
+    transition: stroke-dashoffset 1s linear;
+}
+
+.project-card:hover svg.border-svg.ready rect {
+    stroke-dashoffset: 0;
+}
+
+.project-card:hover svg.border-svg {
+    filter: drop-shadow(0 4px 6px var(--shadow-red-1))
+            drop-shadow(0 6px 10px var(--shadow-red-2))
+            drop-shadow(0 0 12px var(--shadow-red-3))
+            drop-shadow(0 0 25px var(--shadow-red-4));    
+}
+/* #endregion */
+
+/* #region project-card - Disclaimer and badge */
+.project-card .disclaimer {
+    font-size: 0.85em;
+    color: var(--text-muted);
+    margin-top: 0.5em;
+    font-style: italic;
+}
+
+.project-card {
+    position: relative;
+}
+
+.project-card .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--badge-warning-bg);
+    color: var(--status-warning);
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.project-card .badge .material-symbols-outlined {
+    font-size: 1.1em;
+    line-height: 1;
+}
+
+.material-symbols-outlined.project-card-symbol {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+.project-card-symbol.badge.warning {
+    color: var(--status-warning);
+}
+/* #endregion */
+/* #endregion My Projects */
+
+/* #region Pinned repos */
 .pinnedRepos {
     display: flex;
     flex-wrap: wrap;
@@ -371,7 +618,29 @@ a.repoName:hover::after {
         'opsz' 24
 }
 
-/* Programming Language used in repository (highest % of all) */
+.pinnedRepo .badge{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--badge-warning-bg);
+    color: var(--status-warning);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.pinnedRepo .badge .material-symbols-outlined {
+    font-size: 1em;
+    line-height: 1;
+    color: var(--status-warning);
+}
+/* #endregion */
+
+/* #region Programming Language used in repository (highest % of all) */
 .proLang.python {
     color: var(--python);
 }
@@ -384,7 +653,16 @@ a.repoName:hover::after {
     color: var(--html);
 }
 
-/* Services */
+.proLang.css {
+    color: var(--css);
+}
+
+.proLang.unknown {
+    color: var(--text-muted);
+}
+/* #endregion */
+
+/* #region Services */
 .SAM {
     display: flex;
     flex-direction: column;
@@ -510,8 +788,9 @@ a.serviceName:hover::after {
         'GRAD' 0,
         'opsz' 24
 }
+/* #endregion */
 
-/* Repos */
+/* #region Repos */
 .repos {
     display: flex;
     flex-direction: column;
@@ -551,14 +830,16 @@ a.repo::after {
 a.repo:hover::after {
     width: 100%;
 }
+/* #endregion */
 
-/* Footer */
+/* #region Footer */
 footer {
     border-top: 2px solid var(--accent);
     margin-top: auto;
 }
+/* #endregion */
 
-/* Socials */
+/* #region Socials */
 .socials {
     display: flex;
     justify-content: center;
@@ -610,8 +891,9 @@ a:hover {
     color: var(--socials);
     border: 2px solid var(--socials);
 }
+/* #endregion */
 
-/* Copyright */
+/* #region Copyright */
 .copyright {
     font-size: 13px;
     color: var(--main-text);
@@ -623,3 +905,4 @@ a:hover {
 h1 {
     font-size: 220%;
 }
+/* #endregion */
