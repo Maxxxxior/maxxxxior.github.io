@@ -19,6 +19,7 @@ const I18N = {
         repoWChUW: 'Spis pomieszczeń Wydziału Chemii Uniwersytetu Warszawskiego z funkcją logowania oraz wykazem właścicieli i osób uprawnionych do korzystania z poszczególnych pomieszczeń.',
         samTitle: 'Monitor dostępności serwisów',
         projectStatusInDevelopment: 'W fazie rozwoju',
+        projectStatusAPI: 'API',
         noLanguageTooltip: 'GitHub nie wykrył języka dla tego repozytorium',
         inDevelopmentTooltip: 'Projekt jest w fazie rozwoju - część funkcji może nie być jeszcze dostępna.',
         // To use tooltip, add this to any element: data-i18n-tooltip="testTooltip"
@@ -45,6 +46,7 @@ const I18N = {
         repoWChUW: 'Directory of rooms at the Faculty of Chemistry, University of Warsaw, featuring login functionality and a list of room owners along with authorized personnel for each room.',
         samTitle: 'Service Availability Monitor',
         projectStatusInDevelopment: 'In development',
+        projectStatusAPI: 'API',
         noLanguageTooltip: 'GitHub did not detect a language for this repository',
         inDevelopmentTooltip: 'The project is currently in development - some features may not yet be available.',
         // To use tooltip, add this to any element: data-i18n-tooltip="testTooltip"
