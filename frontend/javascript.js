@@ -47,6 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const rect = svg?.querySelector("rect");
         if (!svg || !rect) return;
 
+        const isMobile = window.matchMedia("(max-width: 768px)").matches;
+        if (isMobile) return;
+
         function update() {
             const w = Math.max(0, svg.clientWidth - 12);
             const h = Math.max(0, svg.clientHeight - 12);
@@ -57,21 +60,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const length = Math.round(rect.getTotalLength());
             svg.style.setProperty("--dash", length);
-            svg.classList.add("ready");
-            rect.style.strokeDasharray = "";
-            rect.style.strokeDashoffset = "";
-        }
+            rect.setAttribute("stroke-dasharray", length);
+            rect.setAttribute("stroke-dashoffset", length);
+        };
 
-        if (document.readyState === "complete") {
-            update();
-        } else {
-            window.addEventListener("load", update);
-        }
+        update();
 
-        let t;
         window.addEventListener("resize", () => {
-            clearTimeout(t);
-            t = setTimeout(update, 120);
+            clearTimeout(window.updateTimeout);
+            window.updateTimeout = setTimeout(update, 120);
+        });
+
+        requestAnimationFrame(() => {
+            rect.classList.add("animated");
+            svg.classList.add("visible");
         });
     }
 

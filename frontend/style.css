@@ -395,6 +395,13 @@ h1.myProjects {
     isolation: isolate;
 }
 
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
 /* #region project-card */
 .project-card {
     position: relative;
@@ -438,6 +445,12 @@ h1.myProjects {
             drop-shadow(0 4px 6px var(--shadow-red-2))
             drop-shadow(0 0 10px var(--shadow-red-3))
             drop-shadow(0 0 20px var(--shadow-red-4));
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.project-card svg.border-svg.visible {
+    opacity: 1;
 }
 
 .project-card svg.border-svg rect {
@@ -445,15 +458,16 @@ h1.myProjects {
     stroke-width: 6;
     stroke-dasharray: var(--dash, 0);
     stroke-dashoffset: var(--dash, 0);
+    transition: none;
     rx: 15;
     ry: 15;
 }
 
-.project-card svg.border-svg.ready rect {
-    transition: stroke-dashoffset 1s linear;
+.project-card svg.border-svg rect.animated {
+    transition: stroke-dashoffset 0.7s linear;
 }
 
-.project-card:hover svg.border-svg.ready rect {
+.project-card:hover svg.border-svg rect {
     stroke-dashoffset: 0;
 }
 
