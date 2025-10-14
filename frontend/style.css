@@ -480,6 +480,48 @@ h1.myProjects {
 /* #endregion */
 /* #endregion My Projects */
 
+/* #region Repos */
+.repos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--sec-text);
+}
+
+h1.myRepos {
+    color: var(--main-text);
+}
+
+a.repo {
+    display: inline-block;
+    margin: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    color: inherit;
+}
+
+a.repo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 3px;
+    width: 0;
+    background: var(--accent);
+    transition: width 0.4s ease;
+    filter:
+        drop-shadow(0 2px 4px var(--shadow-red-1))
+        drop-shadow(0 4px 6px var(--shadow-red-2))
+        drop-shadow(0 0 10px var(--shadow-red-3))
+        drop-shadow(0 0 20px var(--shadow-red-4));
+}
+
+a.repo:hover::after {
+    width: 100%;
+}
+/* #endregion */
+
 /* #region Pinned repos */
 .pinnedRepos {
     display: flex;
@@ -564,14 +606,14 @@ a.repoName:hover::after {
     color: var(--main-text);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 915px) {
     .pinnedRepo {
         flex: 1 1 calc(50% - 12px);
         max-width: unset;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .pinnedRepo {
         flex: 1 1 100%;
         max-width: unset;
@@ -674,6 +716,12 @@ h1.samTitle {
     min-height: 60px;
 }
 
+@media (max-width: 460px) {
+    .service {
+        min-width: 250px;
+    }
+}
+
 .serviceHeader {
     display: flex;
     align-items: center;
@@ -691,6 +739,12 @@ h1.samTitle {
     color: var(--accent);
     font-weight: 600;
     font-size: 25px;
+}
+
+@media (max-width: 420px) {
+    .serviceName {
+        font-size: 14px;
+    }
 }
 
 .serviceName:after {
@@ -743,14 +797,14 @@ a.serviceName:hover::after {
     display: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 915px) {
     .service {
         flex: 1 1 calc(50% - 12px);
         max-width: unset;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .service {
         flex: 1 1 100%;
         max-width: unset;
@@ -763,48 +817,6 @@ a.serviceName:hover::after {
         'wght' 400,
         'GRAD' 0,
         'opsz' 24
-}
-/* #endregion */
-
-/* #region Repos */
-.repos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--sec-text);
-}
-
-h1.myRepos {
-    color: var(--main-text);
-}
-
-a.repo {
-    display: inline-block;
-    margin: 15px;
-    font-size: 20px;
-    text-decoration: none;
-    position: relative;
-    color: inherit;
-}
-
-a.repo::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    height: 3px;
-    width: 0;
-    background: var(--accent);
-    transition: width 0.4s ease;
-    filter:
-        drop-shadow(0 2px 4px var(--shadow-red-1))
-        drop-shadow(0 4px 6px var(--shadow-red-2))
-        drop-shadow(0 0 10px var(--shadow-red-3))
-        drop-shadow(0 0 20px var(--shadow-red-4));
-}
-
-a.repo:hover::after {
-    width: 100%;
 }
 /* #endregion */
 
