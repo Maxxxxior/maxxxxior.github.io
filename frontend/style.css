@@ -478,51 +478,6 @@ h1.myProjects {
             drop-shadow(0 0 25px var(--shadow-red-4));    
 }
 /* #endregion */
-
-/* #region project-card - Disclaimer and badge */
-.project-card .disclaimer {
-    font-size: 0.85em;
-    color: var(--text-muted);
-    margin-top: 0.5em;
-    font-style: italic;
-}
-
-.project-card {
-    position: relative;
-}
-
-.project-card .badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--badge-warning-bg);
-    color: var(--status-warning);
-    padding: 4px 10px;
-    border-radius: 8px;
-    font-size: 0.8em;
-    font-weight: 500;
-}
-
-.project-card .badge .material-symbols-outlined {
-    font-size: 1.1em;
-    line-height: 1;
-}
-
-.material-symbols-outlined.project-card-symbol {
-    font-variation-settings:
-        'FILL' 1,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24
-}
-
-.project-card-symbol.badge.warning {
-    color: var(--status-warning);
-}
-/* #endregion */
 /* #endregion My Projects */
 
 /* #region Pinned repos */
@@ -850,6 +805,58 @@ a.repo::after {
 
 a.repo:hover::after {
     width: 100%;
+}
+/* #endregion */
+
+/* #region project-card - Disclaimer and badge */
+.project-card .disclaimer {
+    font-size: 0.85em;
+    color: var(--text-muted);
+    margin-top: 0.5em;
+    font-style: italic;
+}
+
+.project-card {
+    position: relative;
+}
+
+.project-card .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--badge-warning-bg);
+    color: var(--status-warning);
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+/* bottom right corner badge in .pinnedRepo */
+.pinnedRepo .badge {
+    top: auto;
+    bottom: 10px;
+    right: 10px;
+}
+
+.project-card .badge .material-symbols-outlined {
+    font-size: 1.1em;
+    line-height: 1;
+}
+
+.material-symbols-outlined.project-card-symbol {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+.project-card-symbol.badge.warning {
+    color: var(--status-warning);
 }
 /* #endregion */
 
