@@ -613,13 +613,6 @@ a.repoName:hover::after {
     }
 }
 
-/* @media (max-width: 600px) {
-    .pinnedRepo {
-        flex: 1 1 100%;
-        max-width: unset;
-    }
-} */
-
 @media (max-width: 768px) {
     .pinnedRepo {
         flex: 1 1 100%;
@@ -804,20 +797,6 @@ a.serviceName:hover::after {
     display: none;
 }
 
-/* @media (max-width: 900px) {
-    .service {
-        flex: 1 1 calc(50% - 12px);
-        max-width: unset;
-    }
-} */
-
-/* @media (max-width: 915px) {
-    .service {
-        flex: 1 1 calc(50% - 12px);
-        max-width: unset;
-    }
-} */
-
 @media (max-width: 915px) {
     .service {
         flex: 1 1 calc(50% - 12px);
@@ -829,38 +808,6 @@ a.serviceName:hover::after {
     .service {
         flex: 1 1 100%;
         max-width: unset;
-    }
-}
-
-/* @media (max-width: 768px) {
-    .serviceName {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 420px) {
-    .serviceName {
-        font-size: 14px;
-    }
-} */
-
-/* .serviceName {
-    font-size: clamp(14px, 2vw, 25px);
-} */
-
-/* .serviceName {
-    font-size: clamp(14px, calc((25 - 14) * ((100vw - 420px) / (1920 - 420)) + 14px), 25px);
-} */
-
-/* .service {
-    flex: 1 1 100%;
-    max-width: unset;
-} */
-
-@media (max-width: 420px) {
-    .service {
-        /* flex: 1 1 100%; */
-        /* max-width: unset; */
     }
 }
 
