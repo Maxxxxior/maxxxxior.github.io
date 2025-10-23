@@ -38,49 +38,6 @@ dropBtn.addEventListener("click", (e) => {
 });
 //#endregion
 
-//#region My Project cards
-document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".project-card");
-
-    function setupCard(card) {
-        const svg = card.querySelector("svg.border-svg");
-        const rect = svg?.querySelector("rect");
-        if (!svg || !rect) return;
-
-        const isMobile = window.matchMedia("(max-width: 768px)").matches;
-        if (isMobile) return;
-
-        function update() {
-            const w = Math.max(0, svg.clientWidth - 12);
-            const h = Math.max(0, svg.clientHeight - 12);
-            rect.setAttribute("x", 6);
-            rect.setAttribute("y", 6);
-            rect.setAttribute("width", Math.round(w));
-            rect.setAttribute("height", Math.round(h));
-
-            const length = Math.round(rect.getTotalLength());
-            svg.style.setProperty("--dash", length);
-            rect.setAttribute("stroke-dasharray", length);
-            rect.setAttribute("stroke-dashoffset", length);
-        };
-
-        update();
-
-        window.addEventListener("resize", () => {
-            clearTimeout(window.updateTimeout);
-            window.updateTimeout = setTimeout(update, 120);
-        });
-
-        requestAnimationFrame(() => {
-            rect.classList.add("animated");
-            svg.classList.add("visible");
-        });
-    }
-
-    cards.forEach(setupCard);
-});
-//#endregion
-
 //#region My repositories used languages based on highest % straight from Github, using official GitHub API
 document.addEventListener("DOMContentLoaded", async () => {
     const CACHE_KEY = "repoLanguages";
@@ -177,3 +134,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     updateRepos(languagesData);
 });
 //#endregion
+
