@@ -52,7 +52,7 @@ The site was built from scratch - no frameworks, no templates - focusing on simp
 │   ├── i18n.js
 │   ├── javascript.js
 │   ├── sam.js
-│   ├── style.js
+│   ├── style.css
 │   └── theme.js
 ├── images/
 │   └── github_pfp.svg
