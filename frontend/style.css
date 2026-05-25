@@ -1,17 +1,19 @@
 /* #region Colors */
 :root {
-    --main-bg: #080708;
-    --main-text: #e6e8e6;
-    --sec-text: #df2935;
+    /* Accent */
     --accent: #df2935;
     --accent-sec: #611117;
     --accent-pink: #ff00d4;
-    --socials: #df2935;
+
+    /* Generic */
+    --socials: var(--accent);
+
     /* Programming Languages */
     --python: #3572a5;
     --javascript: #f1e05a;
     --html: #e34c26;
     --css: #663399;
+
     /* Services */
     --service-running: #28a745;
     --service-sleeping: #6c757d;
@@ -22,15 +24,7 @@
     --service-building: #17a2b8;
     --service-app-starting: #007bff;
     --service-running-app-starting: #20c997;
-    /* Text / Disclaimers */
-    --text-muted: #aaa;
-    /* Badge warnings */
-    --badge-warning-bg: rgba(255, 193, 7, 0.15);
-    --badge-warning-bg-light: rgba(255, 193, 7, 0.25);
-    --badge-warning-border: rgba(255, 193, 7, 0.4);
-    /* Badge informations */
-    --badge-info-bg: rgba(23, 162, 184, 0.15);
-    --badge-info-bg-light: rgba(23, 162, 184, 0.2);
+
     /* Status Colors */
     --status-success: #28a745;
     --status-info: #17a2b8;
@@ -40,77 +34,65 @@
     --status-pending: #ff8800;
     --status-neutral: #6c757d;
     --status-disabled: #4b4b4b;
+
     /* Shadows */
     --shadow-red-1: rgba(255, 0, 0, 0.2);
     --shadow-red-2: rgba(255, 0, 0, 0.19);
     --shadow-red-3: rgba(255, 0, 0, 0.4);
     --shadow-red-4: rgba(255, 0, 0, 0.38);
+
     --shadow-pink-1: var(--accent-pink);
     --shadow-pink-2: var(--accent-pink);
     --shadow-pink-3: var(--accent-pink);
     --shadow-pink-4: var(--accent-pink);
+
     /* Additional */
     --link: #3772ff;
     --yellow: #fdca40;
+}
+
+html[data-theme="dark"]{
+    --main-bg: #080708;
+    --sec-bg: #222222;
+
+    --main-text: #e6e8e6;
+    --sec-text: var(--accent);
+    --text-muted: #aaa;
+
+    /* Badge warnings */
+    --badge-warning-bg: rgba(255, 193, 7, 0.15);
+    --badge-warning-bg-light: rgba(255, 193, 7, 0.25);
+    --badge-warning-border: rgba(255, 193, 7, 0.4);
+
+    /* Badge informations */
+    --badge-info-bg: rgba(23, 162, 184, 0.15);
+    --badge-info-bg-light: rgba(23, 162, 184, 0.2);
 }
 
 html[data-theme="light"]{
     --main-bg: #e6e8e6;
+    --sec-bg: #d6d8d6;
+
     --main-text: #080708;
-    --sec-text: #df2935;
-    --accent: #df2935;
-    --accent-sec: #611117;
-    --accent-pink: #ff00d4;
-    --socials: #df2935;
-    /* Programming Languages */
-    --python: #3572a5;
-    --javascript: #f1e05a;
-    --html: #e34c26;
-    --css: #663399;
-    /* Services */
-    --running: #28a745;
-    --sleeping: #6c757d;
-    --runtime-error: #dc3545;
-    --paused: #ffc107;
-    --build-error: #e83e8c;
-    --config-error: #fd7e14;
-    --building: #17a2b8;
-    --app-starting: #007bff;
-    --running-app-starting: #20c997;
-    /* Text / Disclaimers */
+    --sec-text: var(--accent);
     --text-muted: #555;
+
     /* Badge warnings */
     --badge-warning-bg: rgba(255, 193, 7, 0.3);
     --badge-warning-bg-light: rgba(255, 193, 7, 0.35);
     --badge-warning-border: rgba(255, 193, 7, 0.5);
+    
     /* Badge informations */
     --badge-info-bg: rgba(23, 162, 184, 0.25);
     --badge-info-bg-light: rgba(23, 162, 184, 0.3);
-    /* Status Colors */
-    --status-success: #28a745;
-    --status-info: #17a2b8;
-    --status-warning: #b8860b;
-    --status-error: #dc3545;
-    --status-critical: #b30000;
-    --status-pending: #ff8800;
-    --status-neutral: #6c757d;
-    --status-disabled: #4b4b4b;
-    /* Shadows */
-    --shadow-red-1: rgba(255, 0, 0, 0.2);
-    --shadow-red-2: rgba(255, 0, 0, 0.19);
-    --shadow-red-3: rgba(255, 0, 0, 0.4);
-    --shadow-red-4: rgba(255, 0, 0, 0.38);
-    --shadow-pink-1: var(--accent-pink);
-    --shadow-pink-2: var(--accent-pink);
-    --shadow-pink-3: var(--accent-pink);
-    --shadow-pink-4: var(--accent-pink);
-    /* Additional */
-    --link: #3772ff;
-    --yellow: #fdca40;
 }
 /* #endregion */
 
 /* #region main */
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -122,6 +104,27 @@ body {
     color: var(--main-text);
     text-align: center;
     padding: 0px 50px 0px 50px;
+}
+
+/* Pasek przewijania dla Chrome, Edge i Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--main-bg); 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent); /* Tu Twój główny kolor, np. czerwony */
+  border-radius: 5px;
+  border: 3px solid var(--main-bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-sec); /* Jaśniejszy przy najechaniu */
+}
+
+* {
+    /* scrollbar-width: thin; */
+    scrollbar-color: var(--accent) var(--main-bg);
 }
 /* #endregion */
 
