@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="dark">
+<!-- #region Head -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="frontend\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>About Me | Maxxxxior</title>
+</head>
+<!-- #endregion -->
+<body>
+    <div class="page">
+        <!-- #region Topbar -->
+        <header class="topbar" aria-label="Górna belka nawigacyjna">
+            <!-- #region Left Side -->
+            <div class="leftSide">
+                <div class="github">
+                    <a href="index.html" class="github-avatar">
+                        <img style="height: auto;" alt src="images\github_pfp.svg" width="32" height="32">
+                    </a>
+                    <a href="index.html" class="github-nickname">
+                        <span>Maxxxxior</span>
+                    </a>
+                </div>
+            </div>
+            <!-- #endregion -->
+
+            <button id="burgerBtn" class="burger" aria-label="Menu">&#9776;</button>
+
+            <!-- #region Actions Wrapper -->
+            <div class="actionsWrapper">
+                <div class="actions">
+                    <a href="index.html">
+                        <button type="button" id="homeBtn" class="btn" aria-label="Home" data-i18n="home"></button>
+                    </a>
+                    <div class="dropdown">
+                        <button class="dropBtn" data-i18n="repos">Repozytoria</button>
+                        <div class="dropdown-content">
+                            <a href="https://github.com/Maxxxxior/base64deencoder" class="repoDrop" id="repoDrop">
+                                <span>base64deencoder</span>
+                            </a>
+                            <a href="https://github.com/Maxxxxior/DiscordBotGB" class="repoDrop" id="repoDrop">
+                                <span>DiscordBotGB</span>
+                            </a>
+                            <a href="https://github.com/Maxxxxior/FunkyChat" class="repoDrop" id="repoDrop">
+                                <span>FunkyChat</span>
+                            </a>
+                            <a href="https://github.com/Maxxxxior/ImageToText" class="repoDrop" id="repoDrop">
+                                <span>ImageToText</span>
+                            </a>
+                            <a href="https://github.com/Maxxxxior/maxxxxior.github.io" class="repoDrop" id="repoDrop">
+                                <span>maxxxxior.github.io</span>
+                            </a>
+                            <a href="https://github.com/Maxxxxior/MaxChatbot" class="repoDrop" id="repoDrop">
+                                <span>MaxChatbot</span>
+                            </a>
+                            <a href="https://github.com/Maxxxxior/SAM" class="repoDrop" id="repoDrop">
+                                <span>SAM</span>
+                            </a>
+                            <a href="https://github.com/Maxxxxior/SpisPomieszczenWChUW" class="repoDrop" id="repoDrop">
+                                <span>SpisPomieszczenWChUW</span>
+                            </a>
+                        </div>
+                    </div>
+                    <button type="button" id="themeBtn" class="btn" aria-label="Przełącz motyw" data-i18n="changeTheme"></button>
+                    <button type="button" id="langBtn" class="btn" aria-label="Przełącz język">EN</button>
+                </div>
+            </div>
+            <!-- #endregion -->
+            <!-- #region Right Side-->
+            <!-- <div class="rightSide">
+            </div> -->
+            <!-- #endregion -->
+        </header>
+        <!-- #endregion -->
+
+        <!-- #region Main -->
+        <main>
+            <!-- #region Pixel Gallery -->
+            <section class="pixelGallery">
+                <h2 data-i18n="myPixelArt">Moje Pixel Arty (Sprites)</h2>
+            
+                <div class="galleryGrid">
+            
+                    <!-- #region Axe -->
+                    <div class="spriteCard" onclick="openModal(this)">
+                        <div class="spriteDisplay">
+                            <img src="assets/sprites/icons/32x32/Axe.png" alt="Axe" class="sprite spriteIcon" data-i18n-desc="axeDescriptionIcon">
+                            <img src="assets/sprites/icons/32x32/AxeCross.png" alt="Axe Cross" class="sprite spriteIcon" data-i18n-desc="axeDescriptionIcon2">
+                            <img src="assets/sprites/models/64x64/AxeModel.png" alt="Axe Model" class="sprite spriteModel" data-i18n-desc="axeDescriptionModel">
+                        </div>
+                        <p class="spriteTitle" data-i18n="axe">Axe</p>
+                    </div>
+                    <!-- #endregion -->
+            
+                    <!-- #region Sword -->
+                    <div class="spriteCard" onclick="openModal(this)">
+                        <div class="spriteDisplay">
+                            <img src="assets/sprites/icons/32x32/StraightSword.png" alt="Straight Sword" class="sprite spriteIcon" data-i18n-desc="swordStraightIcon">
+                            <img src="assets/sprites/icons/32x32/StraightRunicSword.png" alt="Straight Runic Sword" class="sprite spriteIcon" data-i18n-desc="swordStraightRunicIcon">
+                            <img src="assets/sprites/icons/32x32/ShortStraightSword.png" alt="Short Straight Sword" class="sprite spriteIcon" data-i18n-desc="swordShortStraightIcon">
+                            <img src="assets/sprites/icons/32x32/ShortGuardStraightSword.png" alt="Short Guard Straight Sword" class="sprite spriteIcon" data-i18n-desc="swordShortGuardStraightIcon">
+                            <img src="assets/sprites/icons/32x32/SharpenedBroadSword.png" alt="Sharpened Broad Sword" class="sprite spriteIcon" data-i18n-desc="swordSharpenedBroadIcon">
+                            <img src="assets/sprites/icons/32x32/SerratedSword.png" alt="Serrated Sword" class="sprite spriteIcon" data-i18n-desc="swordSerratedIcon">
+                            <img src="assets/sprites/icons/32x32/MediumGuardStraightSword.png" alt="Medium Guard Straight Sword" class="sprite spriteIcon" data-i18n-desc="swordMediumGuardStraightIcon">
+                            <img src="assets/sprites/icons/32x32/LongGuardStraightSword.png" alt="Long Guard Straight Sword" class="sprite spriteIcon" data-i18n-desc="swordLongGuardStraightIcon">
+                            <img src="assets/sprites/icons/32x32/BrokenSword.png" alt="Broken Sword" class="sprite spriteIcon" data-i18n-desc="swordBrokenIcon">
+                            <img src="assets/sprites/icons/32x32/BroadSword.png" alt="Broad Sword" class="sprite spriteIcon" data-i18n-desc="swordBroadIcon">
+                            <img src="assets/sprites/icons/32x32/VShapedMediumGuardStraightSword.png" alt="V-Shaped Medium Guard Straight Sword" class="sprite spriteIcon" data-i18n-desc="swordVShapedMediumGuardStraightIcon">
+                    
+                            <img src="assets/sprites/models/64x64/BroadSwordModel.png" alt="Broad Sword Model" class="sprite spriteModel" data-i18n-desc="swordBroadModel">
+                            <img src="assets/sprites/models/64x64/BrokenSwordModel.png" alt="Broken Sword Model" class="sprite spriteModel" data-i18n-desc="swordBrokenModel">
+                            <img src="assets/sprites/models/64x64/SerratedRunicSwordModel.png" alt="Serrated Runic Sword Model" class="sprite spriteModel" data-i18n-desc="swordSerratedRunicModel">
+                            <img src="assets/sprites/models/64x64/SharpenedBroadSwordModel.png" alt="Sharpened Broad Sword Model" class="sprite spriteModel" data-i18n-desc="swordSharpenedBroadModel">
+                            <img src="assets/sprites/models/64x64/ShortSwordModel.png" alt="Short Sword Model" class="sprite spriteModel" data-i18n-desc="swordShortModel">
+                            <img src="assets/sprites/models/64x64/StraightRunicSwordModel.png" alt="Straight Runic Sword Model" class="sprite spriteModel" data-i18n-desc="swordStraightRunicModel">
+                            <img src="assets/sprites/models/64x64/StraightSwordCGuardModel.png" alt="Straight Sword C Guard Model" class="sprite spriteModel" data-i18n-desc="swordStraightCGuardModel">
+                            <img src="assets/sprites/models/64x64/StraightSwordLittleGuardModel.png" alt="Straight Sword Little Guard Model" class="sprite spriteModel" data-i18n-desc="swordStraightLittleGuardModel">
+                            <img src="assets/sprites/models/64x64/StraightSwordLongestGuardModel.png" alt="Straight Sword Longest Guard Model" class="sprite spriteModel" data-i18n-desc="swordStraightLongestGuardModel">
+                            <img src="assets/sprites/models/64x64/StraightSwordLongGuardModel.png" alt="Straight Sword Long Guard Model" class="sprite spriteModel" data-i18n-desc="swordStraightLongGuardModel">
+                            <img src="assets/sprites/models/64x64/StraightSwordMediumGuardModel.png" alt="Straight Sword Medium Guard Model" class="sprite spriteModel" data-i18n-desc="swordStraightMediumGuardModel">
+                            <img src="assets/sprites/models/64x64/StraightSwordNoGuardModel.png" alt="Straight Sword No Guard Model" class="sprite spriteModel" data-i18n-desc="swordStraightNoGuardModel">
+                            <img src="assets/sprites/models/64x64/StraightSwordShortGuardModel.png" alt="Straight Sword Short Guard Model" class="sprite spriteModel" data-i18n-desc="swordStraightShortGuardModel">
+                            <img src="assets/sprites/models/64x64/StraightSwordVGuardModel.png" alt="Straight Sword V Guard Model" class="sprite spriteModel" data-i18n-desc="swordStraightVGuardModel">
+                        </div>
+                        <p class="spriteTitle" data-i18n="sword">Sword</p>
+                    </div>
+                    <!-- #endregion -->
+            
+                    <!-- #region Shield -->
+                    <div class="spriteCard" onclick="openModal(this)">
+                        <div class="spriteDisplay">
+                            <img src="assets/sprites/models/64x64/WoodenShieldModel.png" alt="Wooden Shield" class="sprite spriteModel" data-i18n-desc="shieldWoodenModel">
+                        </div>
+                        <p class="spriteTitle" data-i18n="shield">Shield</p>
+                    </div>
+                    <!-- #endregion -->
+
+                    <!-- #region Pickaxe -->
+                    <div class="spriteCard" onclick="openModal(this)">
+                        <div class="spriteDisplay">
+                            <img src="assets/sprites/icons/32x32/Pickaxe.png" alt="Pickaxe" class="sprite spriteIcon" data-i18n-desc="pickaxeIcon">
+                            <img src="assets/sprites/models/64x64/PickaxeModel.png" alt="Pickaxe Model" class="sprite spriteModel" data-i18n-desc="pickaxeModel">
+                        </div>
+                        <p class="spriteTitle" data-i18n="pickaxe">Pickaxe</p>
+                    </div>
+                    <!-- #endregion -->
+
+                    <!-- #region Spear -->
+                    <div class="spriteCard" onclick="openModal(this)">
+                        <div class="spriteDisplay">
+                            <img src="assets/sprites/icons/32x32/Spear.png" alt="Spear" class="sprite spriteIcon" data-i18n-desc="spearIcon">
+                            <img src="assets/sprites/models/64x64/SpearModel.png" alt="Spear Model" class="sprite spriteModel" data-i18n-desc="spearModel">
+                        </div>
+                        <p class="spriteTitle" data-i18n="spear">Spear</p>
+                    </div>
+                    <!-- #endregion -->
+
+                    <!-- #region Halberd -->
+                    <div class="spriteCard" onclick="openModal(this)">
+                        <div class="spriteDisplay">
+                            <img src="assets/sprites/icons/32x32/Halberd.png" alt="Halberd" class="sprite spriteIcon" data-i18n-desc="halberdIcon">
+                            <img src="assets/sprites/models/64x64/HalberdModel.png" alt="Halberd Model" class="sprite spriteModel" data-i18n-desc="halberdModel">
+                        </div>
+                        <p class="spriteTitle" data-i18n="halberd">Halberd</p>
+                    </div>
+                    <!-- #endregion -->
+
+                    <!-- #region Backpack -->
+                    <div class="spriteCard" onclick="openModal(this)">
+                        <div class="spriteDisplay">
+                            <img src="assets/sprites/icons/32x32/Backpack.png" alt="Backpack" class="sprite spriteIcon" data-i18n-desc="backpackBaseIcon">
+                            <img src="assets/sprites/icons/32x32/Backpack-tier1.png" alt="Backpack Tier 1" class="sprite spriteIcon" data-i18n-desc="backpackTier1Icon">
+                            <img src="assets/sprites/icons/32x32/Backpack-tier2.png" alt="Backpack Tier 2" class="sprite spriteIcon" data-i18n-desc="backpackTier2Icon">
+                            <img src="assets/sprites/icons/32x32/Backpack-tier3.png" alt="Backpack Tier 3" class="sprite spriteIcon" data-i18n-desc="backpackTier3Icon">
+                        </div>
+                        <p class="spriteTitle" data-i18n="backpack">Backpack</p>
+                    </div>
+                    <!-- #endregion -->
+
+                    <!-- #region Log -->
+                    <div class="spriteCard" onclick="openModal(this)">
+                        <div class="spriteDisplay">
+                            <img src="assets/sprites/icons/32x32/Log.png" alt="Log" class="sprite spriteIcon" data-i18n-desc="logIcon">
+                        </div>
+                        <p class="spriteTitle" data-i18n="log">Log</p>
+                    </div>
+                    <!-- #endregion -->
+                </div>
+            </section>
+            <!-- #endregion -->
+        </main>
+        <!-- #endregion -->
+
+        <!-- #region Footer -->
+        <footer>
+            <!-- #region Socials -->
+            <nav class="socials">
+                <a href="https://github.com/Maxxxxior" target="_blank" rel="noopener noreferrer" class="fa fa-github" id="socials"></a>
+                <a href="https://www.linkedin.com/in/maksymilian-podlecki-003b69267" target="_blank" rel="noopener noreferrer" class="fa fa-linkedin" id="socials"></a>
+            </nav>
+            <!-- #endregion -->
+            <!-- #region Copyright -->
+            <div class="copyright">
+                <span>© <span id="year"></span> <span data-i18n="createdBy">Stworzone przez</span> <a href="https://github.com/Maxxxxior" target="_blank" rel="noopener noreferrer" class="max">Maxxxxior</a> • <a href="mailto:Maksymilian.Podlecki@gmail.com" class="mail">Maksymilian.Podlecki@gmail.com</a></span>
+            </div>
+            <!-- #endregion -->
+        </footer>
+        <!-- #endregion -->
+    </div>
+
+    <!-- #region Pixelart Modal -->
+    <div id="customModal" class="modal">
+        <span class="closeModal" onclick="modalClose()">&times;</span>
+    
+        <div class="modalContent">
+            <!-- #region Left side -->
+            <div class="modalPreviewSide">
+                <div class="zoomControls">
+                    <button onclick="modalZoom(0.2)">+</button>
+                    <button onclick="modalZoom(-0.2)">-</button>
+                    <button onclick="modalResetZoom()">Reset</button>
+                    <button onclick="modalToggleBackground()"><img src="assets/sprites/BackgroundCanvas.png" style="width: 20px; height: 20px;"></button>
+                </div>
+                <div class="modalImageContainer">
+                    <canvas id="modalCanvas"></canvas>
+                </div>
+                <div id="modalThumbs" class="modalThumbs"></div>
+            </div>
+            <!-- #endregion -->
+    
+            <!-- #region Right side -->
+            <div class="modalInfoSide">
+                <h2 id="modalTitle">Nazwa projektu</h2>
+                <p id="modalDesc">Opis...</p>
+    
+                <hr style="border-color: #444; margin: 20px 0;">
+    
+                <h3 data-i18n="fileDetails">Szczegóły pliku:</h3>
+                <table class="metaTable">
+                    <tr>
+                        <td data-i18n="fileName">Wybrany plik:</td>
+                        <td id="metaFileName">-</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="fileSize">Wymiary:</td>
+                        <td id="metaFileSize">-</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="fileWeight">Waga pliku:</td>
+                        <td id="metaFileWeight">-</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- #endregion -->
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region Scripts -->
+    <script src="frontend\javascript.js"></script>
+    <script src="frontend\i18n.js"></script>
+    <script src="frontend\theme.js"></script>
+    <!-- #endregion -->
+</body>
+</html>

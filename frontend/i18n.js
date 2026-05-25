@@ -1,6 +1,8 @@
 //#region I18N
 const I18N = {
     pl: {
+        aboutMe: 'O mnie',
+        home: 'Strona główna',
         repos: 'Repozytoria',
         changeTheme: 'Zmień motyw',
         myProjects: 'Moje projekty',
@@ -24,11 +26,100 @@ const I18N = {
         noLanguageTooltip: 'GitHub nie wykrył języka dla tego repozytorium',
         inDevelopmentTooltip: 'Projekt jest w fazie rozwoju - część funkcji może nie być jeszcze dostępna.',
         // To use tooltip, add this to any element: data-i18n-tooltip="testTooltip"
+
+        //#region PixelArty
+        myPixelArt: 'Moje Pixel Arty (Sprites)',
+        fileDetails: 'Szczegóły pliku:',
+        fileName: 'Nazwa pliku:',
+        fileSize: 'Wymiary:',
+        fileWeight: 'Waga pliku:',
+
+        //#region Nazwy przedmiotów
+        axe: 'Siekiera',
+        sword: 'Miecz',
+        shield: 'Tarcza',
+        pickaxe: 'Kilof',
+        spear: 'Włócznia',
+        halberd: 'Halabarda',
+        backpack: 'Plecak',
+        log: 'Kłoda',
+        //#endregion
+
+        //#region Opisy Siekiery
+        axeDescriptionIcon: "Ikonka dla przedmiotu Siekiera w grze, którą aktualnie tworzę.",
+        axeDescriptionIcon2: "Ikonka dla przedmiotu Siekiera z Krzyżem w grze, którą aktualnie tworzę.",
+        axeDescriptionModel: "Model dla przedmiotu Siekiera w grze, którą aktualnie tworzę.",
+        //#endregion
+
+        //#region Opisy Mieczy (Ikony)
+        swordStraightIcon: "Ikonka dla przedmiotu Prosty Miecz w grze, którą aktualnie tworzę.",
+        swordStraightRunicIcon: "Ikonka dla przedmiotu Prosty Miecz Runiczny w grze, którą aktualnie tworzę.",
+        swordShortStraightIcon: "Ikonka dla przedmiotu Krótki Prosty Miecz w grze, którą aktualnie tworzę.",
+        swordShortGuardStraightIcon: "Ikonka dla przedmiotu Prosty Miecz z Krótkim Jelcem w grze, którą aktualnie tworzę.",
+        swordSharpenedBroadIcon: "Ikonka dla przedmiotu Zaostrzony Szeroki Miecz w grze, którą aktualnie tworzę.",
+        swordSerratedIcon: "Ikonka dla przedmiotu Miecz Ząbkowany w grze, którą aktualnie tworzę.",
+        swordMediumGuardStraightIcon: "Ikonka dla przedmiotu Prosty Miecz ze Średnim Jelcem w grze, którą aktualnie tworzę.",
+        swordLongGuardStraightIcon: "Ikonka dla przedmiotu Prosty Miecz z Długim Jelcem w grze, którą aktualnie tworzę.",
+        swordBrokenIcon: "Ikonka dla przedmiotu Złamany Miecz w grze, którą aktualnie tworzę.",
+        swordBroadIcon: "Ikonka dla przedmiotu Szeroki Miecz w grze, którą aktualnie tworzę.",
+        swordVShapedMediumGuardStraightIcon: "Ikonka dla przedmiotu Prosty Miecz z Jelcem w Kształcie Litery V w grze, którą aktualnie tworzę.",
+        //#endregion
+
+        //#region Opisy Mieczy (Modele)
+        swordBroadModel: "Model dla przedmiotu Szeroki Miecz w grze, którą aktualnie tworzę.",
+        swordBrokenModel: "Model dla przedmiotu Złamany Miecz w grze, którą aktualnie tworzę.",
+        swordSerratedRunicModel: "Model dla przedmiotu Ząbkowany Miecz Runiczny w grze, którą aktualnie tworzę.",
+        swordSharpenedBroadModel: "Model dla przedmiotu Zaostrzony Szeroki Miecz w grze, którą aktualnie tworzę.",
+        swordShortModel: "Model dla przedmiotu Krótki Miecz w grze, którą aktualnie tworzę.",
+        swordStraightRunicModel: "Model dla przedmiotu Prosty Miecz Runiczny w grze, którą aktualnie tworzę.",
+        swordStraightCGuardModel: "Model dla przedmiotu Prosty Miecz z Jelcem typu C w grze, którą aktualnie tworzę.",
+        swordStraightLittleGuardModel: "Model dla przedmiotu Prosty Miecz z Małym Jelcem w grze, którą aktualnie tworzę.",
+        swordStraightLongestGuardModel: "Model dla przedmiotu Prosty Miecz z Najdłuższym Jelcem w grze, którą aktualnie tworzę.",
+        swordStraightLongGuardModel: "Model dla przedmiotu Prosty Miecz z Długim Jelcem w grze, którą aktualnie tworzę.",
+        swordStraightMediumGuardModel: "Model dla przedmiotu Prosty Miecz ze Średnim Jelcem w grze, którą aktualnie tworzę.",
+        swordStraightNoGuardModel: "Model dla przedmiotu Prosty Miecz Bez Jelca w grze, którą aktualnie tworzę.",
+        swordStraightShortGuardModel: "Model dla przedmiotu Prosty Miecz z Krótkim Jelcem w grze, którą aktualnie tworzę.",
+        swordStraightVGuardModel: "Model dla przedmiotu Prosty Miecz z Jelcem typu V w grze, którą aktualnie tworzę.",
+        //#endregion
+
+        //#region Opisy Tarczy
+        shieldWoodenModel: "Model oraz ikona dla przedmiotu Drewniana Tarcza w grze, którą aktualnie tworzę.",
+        //#endregion
+
+        //#region Opisy Kilofa
+        pickaxeIcon: "Ikonka dla przedmiotu Kilof w grze, którą aktualnie tworzę.",
+        pickaxeModel: "Model dla przedmiotu Kilof w grze, którą aktualnie tworzę.",
+        //#endregion
+
+        //#region Opisy Włóczni
+        spearIcon: "Ikonka dla przedmiotu Włócznia w grze, którą aktualnie tworzę.",
+        spearModel: "Model dla przedmiotu Włócznia w grze, którą aktualnie tworzę.",
+        //#endregion
+
+        //#region Opisy Halabardy
+        halberdIcon: "Ikonka dla przedmiotu Halabarda w grze, którą aktualnie tworzę.",
+        halberdModel: "Model dla przedmiotu Halabarda w grze, którą aktualnie tworzę.",
+        //#endregion
+
+        //#region Opisy Plecaka
+        backpackBaseIcon: "Ikonka podstawowej wersji przedmiotu Plecak w grze, którą aktualnie tworzę.",
+        backpackTier1Icon: "Ikonka ulepszenia (Poziom 1) dla przedmiotu Plecak w grze, którą aktualnie tworzę.",
+        backpackTier2Icon: "Ikonka ulepszenia (Poziom 2) dla przedmiotu Plecak w grze, którą aktualnie tworzę.",
+        backpackTier3Icon: "Ikonka ulepszenia (Poziom 3) dla przedmiotu Plecak w grze, którą aktualnie tworzę.",
+        //#endregion
+
+        //#region Opisy Kłody
+        logIcon: "Ikonka oraz model dla przedmiotu Kłoda w grze, którą aktualnie tworzę.",
+        //#endregion
+        //#endregion
+        
         testTooltip: 'Testowy tooltip',
         status: 'Sprawdzanie...',
         createdBy: 'Stworzone przez'
     },
     en: {
+        aboutMe: 'About me',
+        home: 'Home',
         repos: 'Repositories',
         changeTheme: 'Change theme',
         myProjects: 'My projects',
@@ -52,6 +143,93 @@ const I18N = {
         noLanguageTooltip: 'GitHub did not detect a language for this repository',
         inDevelopmentTooltip: 'The project is currently in development - some features may not yet be available.',
         // To use tooltip, add this to any element: data-i18n-tooltip="testTooltip"
+
+        //#region PixelArty
+        myPixelArt: 'My Pixel Art (Sprites)',
+        fileDetails: 'File details:',
+        fileName: 'File name:',
+        fileSize: 'File size:',
+        fileWeight: 'File weight:',
+
+        //#region Item Names
+        axe: 'Axe',
+        sword: 'Sword',
+        shield: 'Shield',
+        pickaxe: 'Pickaxe',
+        spear: 'Spear',
+        halberd: 'Halberd',
+        backpack: 'Backpack',
+        log: 'Log',
+        //#endregion
+
+        //#region Axe Descriptions
+        axeDescriptionIcon: "Icon for Axe item in game i'm currently making.",
+        axeDescriptionIcon2: "Icon for Axe with a Cross item in game i'm currently making.",
+        axeDescriptionModel: "Model for Axe item in game i'm currently making.",
+        //#endregion
+
+        //#region Sword Descriptions (Icons)
+        swordStraightIcon: "Icon for Straight Sword item in game i'm currently making.",
+        swordStraightRunicIcon: "Icon for Straight Runic Sword item in game i'm currently making.",
+        swordShortStraightIcon: "Icon for Short Straight Sword item in game i'm currently making.",
+        swordShortGuardStraightIcon: "Icon for Short Guard Straight Sword item in game i'm currently making.",
+        swordSharpenedBroadIcon: "Icon for Sharpened Broad Sword item in game i'm currently making.",
+        swordSerratedIcon: "Icon for Serrated Sword item in game i'm currently making.",
+        swordMediumGuardStraightIcon: "Icon for Medium Guard Straight Sword item in game i'm currently making.",
+        swordLongGuardStraightIcon: "Icon for Long Guard Straight Sword item in game i'm currently making.",
+        swordBrokenIcon: "Icon for Broken Sword item in game i'm currently making.",
+        swordBroadIcon: "Icon for Broad Sword item in game i'm currently making.",
+        swordVShapedMediumGuardStraightIcon: "Icon for V-Shaped Medium Guard Straight Sword item in game i'm currently making.",
+        //#endregion
+
+        //#region Sword Descriptions (Models)
+        swordBroadModel: "Model for Broad Sword item in game i'm currently making.",
+        swordBrokenModel: "Model for Broken Sword item in game i'm currently making.",
+        swordSerratedRunicModel: "Model for Serrated Runic Sword item in game i'm currently making.",
+        swordSharpenedBroadModel: "Model for Sharpened Broad Sword item in game i'm currently making.",
+        swordShortModel: "Model for Short Sword item in game i'm currently making.",
+        swordStraightRunicModel: "Model for Straight Runic Sword item in game i'm currently making.",
+        swordStraightCGuardModel: "Model for Straight Sword with C Guard item in game i'm currently making.",
+        swordStraightLittleGuardModel: "Model for Straight Sword with Little Guard item in game i'm currently making.",
+        swordStraightLongestGuardModel: "Model for Straight Sword with Longest Guard item in game i'm currently making.",
+        swordStraightLongGuardModel: "Model for Straight Sword with Long Guard item in game i'm currently making.",
+        swordStraightMediumGuardModel: "Model for Straight Sword with Medium Guard item in game i'm currently making.",
+        swordStraightNoGuardModel: "Model for Straight Sword with No Guard item in game i'm currently making.",
+        swordStraightShortGuardModel: "Model for Straight Sword with Short Guard item in game i'm currently making.",
+        swordStraightVGuardModel: "Model for Straight Sword with V Guard item in game i'm currently making.",
+        //#endregion
+
+        //#region Shield Descriptions
+        shieldWoodenModel: "Icon and model (at the same time at the moment) for Shield item in game i'm currently making.",
+        //#endregion
+
+        //#region Pickaxe Descriptions
+        pickaxeIcon: "Icon for Pickaxe item in game i'm currently making.",
+        pickaxeModel: "Model for Pickaxe item in game i'm currently making.",
+        //#endregion
+
+        //#region Spear Descriptions
+        spearIcon: "Icon for Spear item in game i'm currently making.",
+        spearModel: "Model for Spear item in game i'm currently making.",
+        //#endregion
+
+        //#region Halberd Descriptions
+        halberdIcon: "Icon for Halberd item in game i'm currently making.",
+        halberdModel: "Model for Halberd item in game i'm currently making.",
+        //#endregion
+
+        //#region Backpack Descriptions
+        backpackBaseIcon: "Icon for basic Backpack item in game i'm currently making.",
+        backpackTier1Icon: "Icon for Backpack upgrade (Tier 1) in game i'm currently making.",
+        backpackTier2Icon: "Icon for Backpack upgrade (Tier 2) in game i'm currently making.",
+        backpackTier3Icon: "Icon for Backpack upgrade (Tier 3) in game i'm currently making.",
+        //#endregion
+
+        //#region Log Descriptions
+        logIcon: "Icon and model (at the same time at the moment) for Log item in game i'm currently making.",
+        //#endregion
+        //#endregion
+
         testTooltip: 'Test tooltip',
         status: 'Checking...',
         createdBy: 'Created by'

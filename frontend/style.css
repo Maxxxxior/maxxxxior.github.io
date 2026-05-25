@@ -880,6 +880,228 @@ a.serviceName:hover::after {
 }
 /* #endregion */
 
+/* #region pixelArt */
+.galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.spriteCard {
+    background: var(--sec-bg);
+    padding: 15px;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spriteCard:hover {
+    transform: translateY(-5px);
+    background-color: var(--shadow-red-1);
+}
+
+.spriteDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    gap: 10px;
+    background: var(--shadow-red-1);
+    background-image: url("/assets/sprites/BackgroundCanvas.png");
+    background-size: cover;
+    border: 2px solid var(--shadow-red-1);
+    margin-bottom: 10px;
+    padding: 15px;
+    height: 140px;
+    width: 140px;
+    cursor: pointer;
+}
+
+.spriteDisplay .spriteIcon:nth-child(n+10) {
+    display: none;
+}
+
+.spriteDisplay .spriteModel:nth-child(n+5) {
+    display: none;
+}
+
+.spriteTitle {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+    color: var(--sec-text);
+}
+/* #endregion */
+
+/* #region Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+}
+
+.closeModal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: var(--main-text);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modalContent {
+    display: flex;
+    background-color: var(--main-bg);
+    margin: 5% auto;
+    width: 80%;
+    height: 80vh;
+    border: 4px solid var(--shadow-red-1);
+    color: var(--main-text);
+    font-family: 'Courier New', monospace;
+    max-width: 95vw;
+    box-sizing: border-box;
+}
+
+.modalPreviewSide {
+    flex: 1.5;
+    background: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    min-width: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.modalImageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    width: 100%;
+    height: calc(100% - 100px);
+    position: relative;
+    background-image: linear-gradient(45deg, var(--sec-bg) 25%, transparent 25%), 
+                    linear-gradient(-45deg, var(--sec-bg) 25%, transparent 25%), 
+                    linear-gradient(45deg, transparent 75%, var(--sec-bg) 75%), 
+                    linear-gradient(-45deg, transparent 75%, var(--sec-bg) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+#modalImg {
+    image-rendering: pixelated;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    transition: none;
+}
+
+#modalCanvas {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    cursor: grab;
+    image-rendering: pixelated;
+}
+
+#modalCanvas:active {
+    cursor: grabbing;
+}
+
+.modalInfoSide {
+    flex: 1;
+    padding: 30px;
+    background: var(--se-bg);
+    overflow-y: auto;
+    min-width: 0;
+}
+
+.zoomControls {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zoomControls button {
+    background: var(--main-bg);
+    color: var(--main-text);
+    border: none;
+    padding: 5px 15px;
+    margin: 0 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.zoomControls button:hover {
+    background: var(--shadow-red-1);
+}
+
+.modalThumbs {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-top: 15px;
+
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom: 8px;
+    box-sizing: border-box;
+}
+
+.modalThumb {
+    flex: 0 0 50px;
+    height: 50px;
+    object-fit: contain;
+    background: var(--shadow-red-1);
+    border: 2px solid var(--shadow-red-1);
+    cursor: pointer;
+    image-rendering: pixelated;
+    box-sizing: border-box;
+}
+
+.modalThumb.active {
+    border-color: var(--accent);
+}
+
+.metaTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.metaTable td {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--shadow-red-1);
+}
+
+.metaTable td:last-child {
+    text-align: right;
+    color: var(--sec-text);
+    font-family: 'Courier New', monospace;
+}
+/* #endregion */
+
 /* #region Footer */
 footer {
     border-top: 2px solid var(--accent);
