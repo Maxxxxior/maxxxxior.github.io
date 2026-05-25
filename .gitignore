@@ -9,6 +9,13 @@ __pycache__/
 /__pycache__
 TODO
 
+aboutme-i18n.js
+aboutme-javascript.js
+aboutme-style.css
+aboutme-theme.js
+
+without_watermark
+
 # User-specific files
 *.rsuser
 *.suo
