@@ -41,6 +41,7 @@ const I18N = {
         pickaxe: 'Kilof',
         spear: 'Włócznia',
         halberd: 'Halabarda',
+        arrow: 'Strzała',
         backpack: 'Plecak',
         log: 'Kłoda',
         //#endregion
@@ -101,6 +102,10 @@ const I18N = {
         halberdModel: "Model dla przedmiotu Halabarda w grze, którą aktualnie tworzę.",
         //#endregion
 
+        //#region Opisy Strzały
+        arrowModel: "Model oraz ikona dla przedmiotu Strzały w grze, którą aktualnie tworzę.",
+        //#endregion
+
         //#region Opisy Plecaka
         backpackBaseIcon: "Ikonka podstawowej wersji przedmiotu Plecak w grze, którą aktualnie tworzę.",
         backpackTier1Icon: "Ikonka ulepszenia (Poziom 1) dla przedmiotu Plecak w grze, którą aktualnie tworzę.",
@@ -158,6 +163,7 @@ const I18N = {
         pickaxe: 'Pickaxe',
         spear: 'Spear',
         halberd: 'Halberd',
+        arrow: 'Arrow',
         backpack: 'Backpack',
         log: 'Log',
         //#endregion
@@ -216,6 +222,10 @@ const I18N = {
         //#region Halberd Descriptions
         halberdIcon: "Icon for Halberd item in game i'm currently making.",
         halberdModel: "Model for Halberd item in game i'm currently making.",
+        //#endregion
+
+        //#region Arrow Descriptions
+        arrowModel: "Model and icon for Arrow item in game i'm currently making.",
         //#endregion
 
         //#region Backpack Descriptions
