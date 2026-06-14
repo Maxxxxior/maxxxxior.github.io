@@ -48,6 +48,7 @@ The site was built from scratch - no frameworks, no templates - focusing on simp
 ## 🧱 Structure <a name="structure"></a>
 ```
 📁 maxxxxior.github.io/
+├── assets/
 ├── frontend/
 │   ├── i18n.js
 │   ├── javascript.js
@@ -58,6 +59,7 @@ The site was built from scratch - no frameworks, no templates - focusing on simp
 │   └── github_pfp.svg
 ├── .gitignore
 ├── README.md
+├── aboutme.html
 └── index.html
 ```
 
@@ -77,10 +79,15 @@ Latest version: [![Latest Release](https://img.shields.io/github/v/release/Maxxx
 You can view all recent changes here:  
 👉 [**Compare v1.3.0 → v1.4.0**](https://github.com/Maxxxxior/maxxxxior.github.io/compare/v1.3.0...v1.4.0)
 
+## ⚖️ License
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+*Note: All graphical assets (images, sprites, models) are **All Rights Reserved** and may not be used without explicit permission.*
+
 ## ✍️ Author <a name="author"></a>
 - [@Maxxxxior](https://github.com/Maxxxxior) - Design, Idea & Full Implementation  
 - Built with love 💜, energy drinks ⚡, and neon aesthetics ✨  
 
 <p align="center">
-    <i>© 2025 Created by <a href="https://github.com/Maxxxxior">@Maxxxxior</a> • <a href="mailto:Maksymilian.Podlecki@gmail.com">Maksymilian.Podlecki@gmail.com</a></i>
+    <i>© 2026 Created by <a href="https://github.com/Maxxxxior">@Maxxxxior</a> • <a href="mailto:Maksymilian.Podlecki@gmail.com">Maksymilian.Podlecki@gmail.com</a></i>
 </p>
