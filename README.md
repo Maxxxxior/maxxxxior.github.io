@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://maxxxxior.github.io" rel="noopener">
-        <img width=200px height=200px src="images\github_pfp.svg" style="border-radius: 20%; background: #000;" alt="Maxxxxior portfolio logo">
+        <img width=200px height=200px src="assets\images\github_pfp.svg" style="border-radius: 20%; background: #000;" alt="Maxxxxior portfolio logo">
     </a>
 </p>
 
@@ -49,14 +49,14 @@ The site was built from scratch - no frameworks, no templates - focusing on simp
 ```
 📁 maxxxxior.github.io/
 ├── assets/
+│   ├── sprites/
+│   └── images/
 ├── frontend/
 │   ├── i18n.js
 │   ├── javascript.js
 │   ├── sam.js
 │   ├── style.css
 │   └── theme.js
-├── images/
-│   └── github_pfp.svg
 ├── .gitignore
 ├── README.md
 ├── aboutme.html
