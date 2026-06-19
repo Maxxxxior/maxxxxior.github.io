@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2026-06-19
+### Added
+- TypeScript support across the entire codebase
+- Vite for project bundling and faster development
+- Separate `galleryData.ts` file for easy addition of pixel arts and other graphical assets
+- Custom color variable for TypeScript language badge (`--typescript`)
+
+### Changed
+- Migrated entire repository from static frontend structures (vanilla HTML/JS) to a dynamic React SPA
+
+### Fixed
+- Mobile burger menu - now closes properly when clicking outside, scrolling, or clicking inside menu
+
+### Removed
+- Outdated static HTML and JS files (files like: `index.html`, `aboutme.html`, `javascript.js`, `theme.js`, `i18n.js`, etc.)
+
+---
+
 ## [1.4.0] - 2026-10-23
 ### Added
 - **API badge** - replaced old `(API)` labels with proper badges for consistency and cleaner visuals
