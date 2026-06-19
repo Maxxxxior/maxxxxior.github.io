@@ -1,4 +1,5 @@
-export const I18N = {
+//#region I18N
+const I18N = {
     pl: {
         aboutMe: 'O mnie',
         home: 'Strona główna',
@@ -116,7 +117,7 @@ export const I18N = {
         logIcon: "Ikonka oraz model dla przedmiotu Kłoda w grze, którą aktualnie tworzę.",
         //#endregion
         //#endregion
-
+        
         testTooltip: 'Testowy tooltip',
         status: 'Sprawdzanie...',
         createdBy: 'Stworzone przez'
@@ -243,7 +244,41 @@ export const I18N = {
         status: 'Checking...',
         createdBy: 'Created by'
     }
-} as const;
+}
+//#endregion
 
-export type Language = 'pl' | 'en';
-export type TranslationKey = keyof typeof I18N['pl'];
+//#region Initialization
+const langBtn = document.getElementById('langBtn');
+const initialLang = localStorage.getItem('lang') || 'pl';
+setLang(initialLang);
+//#endregion
+
+//#region Language
+langBtn.addEventListener('click', () => {
+    const next = (localStorage.getItem('lang') || 'pl') === 'pl' ? 'en' : 'pl';
+    setLang(next);
+    updateServiceStatus();
+});
+
+function setLang(lang) {
+    localStorage.setItem('lang', lang);
+    langBtn.textContent = lang === 'pl' ? 'EN' : 'PL';
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        el.textContent = I18N[lang][key];
+    });
+
+    document.querySelectorAll('[data-i18n-tooltip]').forEach(el => {
+        const key = el.getAttribute('data-i18n-tooltip');
+        el.setAttribute('title', I18N[lang][key]);
+    });
+}
+//#endregion
+
+//#region Global function for translations
+window.i18n = function(key) {
+    const lang = localStorage.getItem('lang') || 'pl';
+    return I18N[lang][key] || key;
+};
+//#endregion
