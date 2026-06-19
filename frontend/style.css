@@ -13,7 +13,6 @@
     --javascript: #f1e05a;
     --html: #e34c26;
     --css: #663399;
-    --typescript: #3178c6;
 
     /* Services */
     --service-running: #28a745;
@@ -656,10 +655,6 @@ a.repoName:hover::after {
     color: var(--css);
 }
 
-.proLang.typescript {
-    color: var(--typescript);
-}
-
 .proLang.unknown {
     color: var(--text-muted);
 }
@@ -831,15 +826,6 @@ a.serviceName:hover::after {
     bottom: 10px;
     right: 10px;
 }
-
-.serviceStatus.running { color: var(--service-running); }
-.serviceStatus.sleeping { color: var(--service-sleeping); }
-.serviceStatus.runtime_error,
-.serviceStatus.error { color: var(--service-runtime-error); }
-.serviceStatus.paused { color: var(--service-paused); }
-.serviceStatus.building { color: var(--service-building); }
-.serviceStatus.app_starting { color: var(--service-app-starting); }
-.serviceStatus.running_app_starting { color: var(--service-running-app-starting); }
 /* #endregion */
 
 /* #region project-card - Disclaimer and badge */
